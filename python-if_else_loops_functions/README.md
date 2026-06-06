@@ -21,3 +21,8 @@ A Python script that prints the lowercase ASCII alphabet except for the letters 
 # 4. Hexadecimal printing
 
 A Python script that prints numbers from 0 to 98 in both decimal and hexadecimal format using a loop and string formatting.
+
+
+# 5. 00...99
+
+A Python script that prints numbers from 00 to 99 in ascending order, formatted with two digits and separated by commas and spaces.
