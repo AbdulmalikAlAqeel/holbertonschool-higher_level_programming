@@ -20,3 +20,9 @@ A Python script that prints the float stored in the variable `number` with a pre
 # 3. Print string
 
 A Python script that prints a string three times and then displays its first 9 characters using string operations.
+
+
+# 4. Play with strings
+
+A Python script that concatenates two strings and prints the message:
+Welcome to Holberton School!
