@@ -11,3 +11,8 @@ A Python script that determines the last digit of a randomly generated number an
 # 2. Print ASCII alphabet
 
 A Python script that prints the lowercase ASCII alphabet using a loop and string formatting, without storing characters in variables or importing modules.
+
+
+# 3. When I was having that alphabet soup, I never thought that it would pay off
+
+A Python script that prints the lowercase ASCII alphabet except for the letters 'e' and 'q', using a loop and string formatting.
