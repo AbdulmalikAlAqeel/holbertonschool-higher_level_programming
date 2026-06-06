@@ -52,3 +52,8 @@ A Python function that prints and returns the last digit of a number, handling b
 
 A Python function that takes two integers as arguments and returns their sum.
 
+
+# 11. a ^ b
+
+A Python function that computes and returns the value of a number raised to the power of another number using the exponent operator.
+
