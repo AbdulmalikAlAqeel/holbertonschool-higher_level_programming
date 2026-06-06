@@ -16,3 +16,8 @@ A Python script that prints the lowercase ASCII alphabet using a loop and string
 # 3. When I was having that alphabet soup, I never thought that it would pay off
 
 A Python script that prints the lowercase ASCII alphabet except for the letters 'e' and 'q', using a loop and string formatting.
+
+
+# 4. Hexadecimal printing
+
+A Python script that prints numbers from 0 to 98 in both decimal and hexadecimal format using a loop and string formatting.
