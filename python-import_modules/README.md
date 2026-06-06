@@ -12,3 +12,8 @@ A Python script that imports addition, subtraction, multiplication, and division
 
 A Python script that prints the number of command-line arguments passed to it and displays each argument with its position.
 
+
+# 3. Infinite addition
+
+A Python script that adds all command-line arguments and prints the result as an integer.
+
