@@ -26,3 +26,8 @@ A Python script that prints a string three times and then displays its first 9 c
 
 A Python script that concatenates two strings and prints the message:
 Welcome to Holberton School!
+
+
+# 5. Copy - Cut - Paste
+
+A Python script that uses string slicing to extract the first three characters, the last two characters, and the middle part of a string.
