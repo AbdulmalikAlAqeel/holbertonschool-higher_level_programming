@@ -37,3 +37,8 @@ A Python script that prints all possible different combinations of two distinct 
 
 A Python function that checks whether a character is lowercase by comparing its ASCII value and returns True or False.
 
+
+# 8. To uppercase
+
+A Python function that prints a string in uppercase by converting lowercase letters using their ASCII values without using built-in uppercase methods.
+
