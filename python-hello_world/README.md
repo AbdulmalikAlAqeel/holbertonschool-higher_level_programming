@@ -31,3 +31,8 @@ Welcome to Holberton School!
 # 5. Copy - Cut - Paste
 
 A Python script that uses string slicing to extract the first three characters, the last two characters, and the middle part of a string.
+
+
+# 6. Create a new sentence
+
+A Python script that creates and prints a new sentence by combining and slicing existing strings without creating new variables or using string literals.
