@@ -36,3 +36,8 @@ A Python script that uses string slicing to extract the first three characters, 
 # 6. Create a new sentence
 
 A Python script that creates and prints a new sentence by combining and slicing existing strings without creating new variables or using string literals.
+
+
+# 7. Easter Egg
+
+A Python script that prints "The Zen of Python" by importing the built-in `this` module.
