@@ -57,3 +57,7 @@ A Python function that takes two integers as arguments and returns their sum.
 
 A Python function that computes and returns the value of a number raised to the power of another number using the exponent operator.
 
+
+# 12. Fizz Buzz
+
+A Python function that prints numbers from 1 to 100, replacing multiples of 3 with "Fizz", multiples of 5 with "Buzz", and multiples of both with "FizzBuzz".
