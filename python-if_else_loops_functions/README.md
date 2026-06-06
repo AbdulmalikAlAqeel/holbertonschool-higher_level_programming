@@ -6,3 +6,8 @@ A Python script that prints whether a randomly generated number is positive, neg
 # 1. The last digit
 
 A Python script that determines the last digit of a randomly generated number and prints a message based on its value using conditional statements.
+
+
+# 2. Print ASCII alphabet
+
+A Python script that prints the lowercase ASCII alphabet using a loop and string formatting, without storing characters in variables or importing modules.
