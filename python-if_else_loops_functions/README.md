@@ -26,3 +26,9 @@ A Python script that prints numbers from 0 to 98 in both decimal and hexadecimal
 # 5. 00...99
 
 A Python script that prints numbers from 00 to 99 in ascending order, formatted with two digits and separated by commas and spaces.
+
+
+# 6. Inventing is a combination of brains and materials. The more brains you use, the less material you need
+
+A Python script that prints all possible different combinations of two distinct digits in ascending order without repeating combinations.
+
