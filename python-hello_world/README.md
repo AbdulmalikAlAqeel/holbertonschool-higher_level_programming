@@ -15,3 +15,8 @@ A Python script that prints the integer stored in the variable `number` followed
 # 2. Print float
 
 A Python script that prints the float stored in the variable `number` with a precision of 2 decimal places using an f-string.
+
+
+# 3. Print string
+
+A Python script that prints a string three times and then displays its first 9 characters using string operations.
