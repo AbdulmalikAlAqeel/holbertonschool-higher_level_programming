@@ -42,3 +42,8 @@ A Python function that checks whether a character is lowercase by comparing its 
 
 A Python function that prints a string in uppercase by converting lowercase letters using their ASCII values without using built-in uppercase methods.
 
+
+# 9. There are only 3 colors, 10 digits, and 7 notes; it's what we do with them that's important
+
+A Python function that prints and returns the last digit of a number, handling both positive and negative integers.
+
