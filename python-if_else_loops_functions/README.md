@@ -47,3 +47,8 @@ A Python function that prints a string in uppercase by converting lowercase lett
 
 A Python function that prints and returns the last digit of a number, handling both positive and negative integers.
 
+
+# 10. a + b
+
+A Python function that takes two integers as arguments and returns their sum.
+
