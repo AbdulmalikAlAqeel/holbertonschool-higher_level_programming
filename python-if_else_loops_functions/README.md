@@ -32,3 +32,8 @@ A Python script that prints numbers from 00 to 99 in ascending order, formatted 
 
 A Python script that prints all possible different combinations of two distinct digits in ascending order without repeating combinations.
 
+
+# 7. islower
+
+A Python function that checks whether a character is lowercase by comparing its ASCII value and returns True or False.
+
