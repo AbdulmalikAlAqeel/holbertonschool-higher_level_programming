@@ -12,6 +12,7 @@
 | `7-add_tuple.py` | `def add_tuple(tuple_a=(), tuple_b=()):`<br>Adds 2 tuples based on their first two elements. Missing elements are safely padded with `0`, and extra elements are ignored. |
 | `8-multiple_returns.py` | `def multiple_returns(sentence):`<br>Returns a tuple with the length of a string and its first character. If the string is empty, the first character returns `None`. |
 | `9-max_integer.py` | `def max_integer(my_list=[]):`<br>Finds the biggest integer of a list without using the built-in `max()` function. Returns `None` if the list is empty. |
+| `10-divisible_by_2.py` | `def divisible_by_2(my_list=[]):`<br>Finds all multiples of 2 in a list. Returns a new list of the same size containing `True` or `False`. |
 ## Setup & Execution
 
 1. **Make the script executable:**
