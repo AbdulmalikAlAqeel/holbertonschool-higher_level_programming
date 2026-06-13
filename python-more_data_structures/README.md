@@ -7,6 +7,7 @@
 | `2-uniq_add.py` | `def uniq_add(my_list=[]):`<br>Adds all unique integers in a list (only once for each integer). Uses Python sets to guarantee uniqueness and optimization. |
 | `3-common_elements.py` | `def common_elements(set_1, set_2):`<br>Returns a set of common elements in two sets using the set intersection operator (`&`). |
 | `4-only_diff_elements.py` | `def only_diff_elements(set_1, set_2):`<br>Returns a set of all elements present in only one set using the symmetric difference operator (`^`). |
+| `5-number_keys.py` | `def number_keys(a_dictionary):`<br>Returns the number of keys in a dictionary using the highly efficient built-in `len()` function. |
 ## Setup & Execution
 
 1. **Make the scripts executable:**
