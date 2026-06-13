@@ -14,6 +14,7 @@
 | `9-multiply_by_2.py` | `def multiply_by_2(a_dictionary):`<br>Returns a brand-new dictionary with all values multiplied by 2 using dictionary comprehension, leaving the original dictionary unmodified.|
 | `10-best_score.py` | `def best_score(a_dictionary):`<br>Returns a key with the biggest integer value (highest score). Efficiently evaluates keys using `max()` and safely handles empty dictionaries or `None` inputs by returning `None`. |
 | `11-multiply_list_map.py` | `def multiply_list_map(my_list=[], number=0):`<br>Returns a new list with all values multiplied by a number without using loops. Accomplished in under 3 lines by harnessing `map()` and an inline `lambda` function. |
+| `12-roman_to_int.py` | `def roman_to_int(roman_string):`<br>Technical interview preparation. Converts a Roman numeral string (between 1 and 3999) to an integer with $O(N)$ time complexity and $O(1)$ space complexity. Returns 0 if input is invalid or `None`. |
 ## Setup & Execution
 
 1. **Make the scripts executable:**
