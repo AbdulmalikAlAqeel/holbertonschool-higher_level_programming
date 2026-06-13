@@ -9,6 +9,7 @@
 | `4-new_in_list.py` | `def new_in_list(my_list, idx, element):`<br>Replaces an element in a list at a specific position without modifying the original list. Returns a copy if `idx` is negative or out of range. |
 | `5-no_c.py` | `def no_c(my_string):`<br>Removes all characters `c` and `C` from a string without using `str.replace()`. |
 | `6-print_matrix_integer.py` | `def print_matrix_integer(matrix=[[]]):`<br>Prints a matrix of integers using `str.format()`, handling row alignment and skipping trailing whitespaces. |
+| `7-add_tuple.py` | `def add_tuple(tuple_a=(), tuple_b=()):`<br>Adds 2 tuples based on their first two elements. Missing elements are safely padded with `0`, and extra elements are ignored. |
 ## Setup & Execution
 
 1. **Make the script executable:**
