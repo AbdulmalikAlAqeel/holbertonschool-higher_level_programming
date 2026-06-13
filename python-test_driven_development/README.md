@@ -71,3 +71,15 @@ This project focuses on the **Test-Driven Development (TDD)** methodology. The p
 * **Run tests:**
   ```bash
   python3 -m doctest ./tests/5-text_indentation.txt
+
+
+
+| File | Description |
+| --- | --- |
+| `6-max_integer.py` | Function that finds the maximum integer in a list. |
+| `tests/6-max_integer_test.py` | `unittest` file to test `max_integer`. |
+
+## Setup & Testing
+* **Run tests:**
+  ```bash
+  python3 -m unittest tests.6-max_integer_test
