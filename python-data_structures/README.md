@@ -6,6 +6,7 @@
 | `1-element_at.py` | `def element_at(my_list, idx):`<br>Retrieves an element from a list at a specific index like in C. Returns `None` if `idx` is negative or out of range. |
 | `2-replace_in_list.py` | `def replace_in_list(my_list, idx, element):`<br>Replaces an element of a list at a specific position. Returns the original list if `idx` is negative or out of range. |
 | `3-print_reversed_list_integer.py` | `def print_reversed_list_integer(my_list=[]):`<br>Prints all integers of a list in reverse order, one integer per line, using string formatting (`"{:d}".format()`). |
+| `4-new_in_list.py` | `def new_in_list(my_list, idx, element):`<br>Replaces an element in a list at a specific position without modifying the original list. Returns a copy if `idx` is negative or out of range. |
 ## Setup & Execution
 
 1. **Make the script executable:**
