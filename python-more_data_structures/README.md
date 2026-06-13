@@ -8,6 +8,7 @@
 | `3-common_elements.py` | `def common_elements(set_1, set_2):`<br>Returns a set of common elements in two sets using the set intersection operator (`&`). |
 | `4-only_diff_elements.py` | `def only_diff_elements(set_1, set_2):`<br>Returns a set of all elements present in only one set using the symmetric difference operator (`^`). |
 | `5-number_keys.py` | `def number_keys(a_dictionary):`<br>Returns the number of keys in a dictionary using the highly efficient built-in `len()` function. |
+| `6-print_sorted_dictionary.py` | `def print_sorted_dictionary(a_dictionary):`<br>Prints a dictionary by ordered keys. Top-level keys are sorted alphabetically (ASCII order) and values can be of any type. |
 ## Setup & Execution
 
 1. **Make the scripts executable:**
