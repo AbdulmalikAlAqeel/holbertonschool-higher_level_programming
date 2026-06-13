@@ -10,6 +10,7 @@
 | `5-no_c.py` | `def no_c(my_string):`<br>Removes all characters `c` and `C` from a string without using `str.replace()`. |
 | `6-print_matrix_integer.py` | `def print_matrix_integer(matrix=[[]]):`<br>Prints a matrix of integers using `str.format()`, handling row alignment and skipping trailing whitespaces. |
 | `7-add_tuple.py` | `def add_tuple(tuple_a=(), tuple_b=()):`<br>Adds 2 tuples based on their first two elements. Missing elements are safely padded with `0`, and extra elements are ignored. |
+| `8-multiple_returns.py` | `def multiple_returns(sentence):`<br>Returns a tuple with the length of a string and its first character. If the string is empty, the first character returns `None`. |
 ## Setup & Execution
 
 1. **Make the script executable:**
