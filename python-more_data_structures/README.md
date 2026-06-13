@@ -13,6 +13,7 @@
 | `8-simple_delete.py` | `def simple_delete(a_dictionary, key=""):`<br>Deletes a key in a dictionary safely. If the key doesn't exist, the dictionary remains unchanged without raising a `KeyError`. |
 | `9-multiply_by_2.py` | `def multiply_by_2(a_dictionary):`<br>Returns a brand-new dictionary with all values multiplied by 2 using dictionary comprehension, leaving the original dictionary unmodified.|
 | `10-best_score.py` | `def best_score(a_dictionary):`<br>Returns a key with the biggest integer value (highest score). Efficiently evaluates keys using `max()` and safely handles empty dictionaries or `None` inputs by returning `None`. |
+| `11-multiply_list_map.py` | `def multiply_list_map(my_list=[], number=0):`<br>Returns a new list with all values multiplied by a number without using loops. Accomplished in under 3 lines by harnessing `map()` and an inline `lambda` function. |
 ## Setup & Execution
 
 1. **Make the scripts executable:**
