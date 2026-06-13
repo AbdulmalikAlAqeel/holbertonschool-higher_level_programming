@@ -7,6 +7,7 @@
 | `2-safe_print_list_integers.py` | `def safe_print_list_integers(my_list=[], x=0):`<br>Prints the first `x` integers of a list. Silently skips non-integer values using `try: / except (ValueError, TypeError):`. Intentionally allows `IndexError` to propagate if `x` exceeds list bounds. Returns the count of successfully printed integers. |
 | `3-safe_print_division.py` | `def safe_print_division(a, b):`<br>Divides two integers and prints the result. Uses the `finally:` block to ensure "Inside result: [value]" is always printed, even if a `ZeroDivisionError` occurs. |
 | `4-list_division.py` | `def list_division(my_list_1, my_list_2, list_length):`<br>Divides element by element two lists. Handles multiple exceptions (`TypeError`, `ZeroDivisionError`, `IndexError`) and uses `finally:` to ensure a new list of length `list_length` is returned. |
+| `5-raise_exception.py` | `def raise_exception():`<br>Explicitly forces the Python interpreter to raise a `TypeError` exception using the `raise` keyword. |
 ## Setup & Execution
 
 1. **Make the scripts executable:**
