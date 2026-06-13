@@ -35,3 +35,15 @@ This project focuses on the **Test-Driven Development (TDD)** methodology. The p
 * **Run tests:**
   ```bash
   python3 -m doctest ./tests/2-matrix_divided.txt
+
+
+
+| File | Description |
+| --- | --- |
+| `3-say_my_name.py` | Prints a formatted name, handling `string` type validation for both inputs. |
+| `tests/3-say_my_name.txt` | `doctest` file for testing `3-say_my_name.py`. |
+
+## Setup & Testing
+* **Run tests:**
+  ```bash
+  python3 -m doctest ./tests/3-say_my_name.txt
