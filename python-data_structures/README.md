@@ -14,6 +14,7 @@
 | `9-max_integer.py` | `def max_integer(my_list=[]):`<br>Finds the biggest integer of a list without using the built-in `max()` function. Returns `None` if the list is empty. |
 | `10-divisible_by_2.py` | `def divisible_by_2(my_list=[]):`<br>Finds all multiples of 2 in a list. Returns a new list of the same size containing `True` or `False`. |
 | `11-delete_at.py` | `def delete_at(my_list=[], idx=0):`<br>Deletes the item at a specific position in a list without using `pop()`. Returns the same list if `idx` is negative or out of range. |
+| `12-switch.py` | Source code completed to switch the values of variables `a` and `b` in-place using Pythonic tuple unpacking. The file is strictly 5 lines long. |
 ## Setup & Execution
 
 1. **Make the script executable:**
