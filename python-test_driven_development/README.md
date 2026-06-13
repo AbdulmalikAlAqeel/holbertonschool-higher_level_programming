@@ -24,3 +24,14 @@ This project focuses on the **Test-Driven Development (TDD)** methodology. The p
 * **Run tests:**
   ```bash
   python3 -m doctest ./tests/*.txt
+
+
+| File | Description |
+| --- | --- |
+| `2-matrix_divided.py` | Divides all elements of a matrix by a number, with proper error handling and rounding. |
+| `tests/2-matrix_divided.txt` | `doctest` file for testing `2-matrix_divided.py`. |
+
+## Setup & Testing
+* **Run tests:**
+  ```bash
+  python3 -m doctest ./tests/2-matrix_divided.txt
