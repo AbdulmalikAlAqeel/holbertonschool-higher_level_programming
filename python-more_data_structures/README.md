@@ -9,6 +9,7 @@
 | `4-only_diff_elements.py` | `def only_diff_elements(set_1, set_2):`<br>Returns a set of all elements present in only one set using the symmetric difference operator (`^`). |
 | `5-number_keys.py` | `def number_keys(a_dictionary):`<br>Returns the number of keys in a dictionary using the highly efficient built-in `len()` function. |
 | `6-print_sorted_dictionary.py` | `def print_sorted_dictionary(a_dictionary):`<br>Prints a dictionary by ordered keys. Top-level keys are sorted alphabetically (ASCII order) and values can be of any type. |
+| `7-update_dictionary.py` | `def update_dictionary(a_dictionary, key, value):`<br>Replaces or adds a key/value pair in a dictionary. Updates the value if the key exists, or creates it if it doesn't. |
 ## Setup & Execution
 
 1. **Make the scripts executable:**
