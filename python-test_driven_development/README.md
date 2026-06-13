@@ -47,3 +47,15 @@ This project focuses on the **Test-Driven Development (TDD)** methodology. The p
 * **Run tests:**
   ```bash
   python3 -m doctest ./tests/3-say_my_name.txt
+
+
+
+| File | Description |
+| --- | --- |
+| `4-print_square.py` | Prints a square of size `n` using the character `#`, with strict type and value validation. |
+| `tests/4-print_square.txt` | `doctest` file for testing `4-print_square.py`. |
+
+## Setup & Testing
+* **Run tests:**
+  ```bash
+  python3 -m doctest ./tests/4-print_square.txt
