@@ -59,3 +59,15 @@ This project focuses on the **Test-Driven Development (TDD)** methodology. The p
 * **Run tests:**
   ```bash
   python3 -m doctest ./tests/4-print_square.txt
+
+
+
+| File | Description |
+| --- | --- |
+| `5-text_indentation.py` | Prints text with 2 new lines after '.', '?', and ':', while ensuring no trailing spaces. |
+| `tests/5-text_indentation.txt` | `doctest` file for testing `5-text_indentation.py`. |
+
+## Setup & Testing
+* **Run tests:**
+  ```bash
+  python3 -m doctest ./tests/5-text_indentation.txt
