@@ -7,6 +7,7 @@
 | `2-replace_in_list.py` | `def replace_in_list(my_list, idx, element):`<br>Replaces an element of a list at a specific position. Returns the original list if `idx` is negative or out of range. |
 | `3-print_reversed_list_integer.py` | `def print_reversed_list_integer(my_list=[]):`<br>Prints all integers of a list in reverse order, one integer per line, using string formatting (`"{:d}".format()`). |
 | `4-new_in_list.py` | `def new_in_list(my_list, idx, element):`<br>Replaces an element in a list at a specific position without modifying the original list. Returns a copy if `idx` is negative or out of range. |
+| `5-no_c.py` | `def no_c(my_string):`<br>Removes all characters `c` and `C` from a string without using `str.replace()`. |
 ## Setup & Execution
 
 1. **Make the script executable:**
