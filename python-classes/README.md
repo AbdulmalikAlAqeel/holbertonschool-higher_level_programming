@@ -23,7 +23,8 @@ This project marks the beginning of Object-Oriented Programming (OOP) in Python.
 | [2-square.py](./2-square.py) | A class `Square` that defines a square by a private instance attribute `size` with strict data validation. Handles default size values, type checking (`int`), and value constraints (`>= 0`). |
 | [3-square.py](./3-square.py) | A class `Square` that defines a square by a private instance attribute `size` with validation, and includes a public instance method `area()` to compute and return the current square's area. |
 | [4-square.py](./4-square.py) | A class `Square` that defines a square with property getter (`@property`) and setter (`@size.setter`) methods for the private attribute `size`. Centralizes validation logic in the setter to prevent invalid updates from outside the class. |
+| [5-square.py](./5-square.py) | A class `Square` that defines a square by a private instance attribute `size` with validation, and includes a public instance method `my_print()` to print the square using the `#` character to stdout (prints an empty line if size is 0). |
 ## Environment & Testing Verification
 To check the code formatting and style compliance, run:
 ```bash
-pycodestyle 0-square.py 1-square.py 2-square.py 3-square.py 4-square.py
+pycodestyle 0-square.py 1-square.py 2-square.py 3-square.py 4-square.py 5-square.py
