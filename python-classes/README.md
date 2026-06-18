@@ -19,8 +19,11 @@ This project marks the beginning of Object-Oriented Programming (OOP) in Python.
 | Task File | Description |
 | :--- | :--- |
 | [0-square.py](./0-square.py) | An empty class `Square` that defines a square. Created to understand the baseline structure of a Python class and its `__dict__` attribute. |
-
+| [1-square.py](./1-square.py) | A class `Square` that defines a square by a private instance attribute `size`. Instantiation with size without type/value verification to understand Data Encapsulation and Name Mangling. |
 ## Environment & Testing Verification
 To check the code formatting and style compliance, run:
 ```bash
-pycodestyle 0-square.py
+pycodestyle 0-square.py 1-square.py
+
+
+
