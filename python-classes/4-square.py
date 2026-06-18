@@ -18,17 +18,17 @@ class Square:
         Args:
             size (int): The size of one side of the square. Defaults to 0.
         """
-        self.size = size  # This line automatically triggers the setter!
+        self.size = size
 
-        @property
-        def size(self):
-            """
-            Retrieves the size of the square.
+    @property
+    def size(self):
+        """
+        Retrieves the size of the square.
 
-            Returns:
-                int: The size of the square side.
-            """
-            return self.__size
+        Returns:
+            int: The size of the square side.
+        """
+        return self.__size
 
     @size.setter
     def size(self, value):
