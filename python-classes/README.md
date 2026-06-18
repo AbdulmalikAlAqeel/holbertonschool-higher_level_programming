@@ -21,10 +21,11 @@ This project marks the beginning of Object-Oriented Programming (OOP) in Python.
 | [0-square.py](./0-square.py) | An empty class `Square` that defines a square. Created to understand the baseline structure of a Python class and its `__dict__` attribute. |
 | [1-square.py](./1-square.py) | A class `Square` that defines a square by a private instance attribute `size`. Instantiation with size without type/value verification to understand Data Encapsulation and Name Mangling. |
 | [2-square.py](./2-square.py) | A class `Square` that defines a square by a private instance attribute `size` with strict data validation. Handles default size values, type checking (`int`), and value constraints (`>= 0`). |
+| [3-square.py](./3-square.py) | A class `Square` that defines a square by a private instance attribute `size` with validation, and includes a public instance method `area()` to compute and return the current square's area. |
 ## Environment & Testing Verification
 To check the code formatting and style compliance, run:
 ```bash
-pycodestyle 0-square.py 1-square.py 2-square.py
+pycodestyle 0-square.py 1-square.py 2-square.py 3-square.py
 
 
 
