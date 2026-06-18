@@ -16,8 +16,8 @@ class Square:
         Initializes a new Square instance.
 
         Args:
-            size (int): The size of the square sides. Defaults to 0.
-            position (tuple): The coordinates of the square. Defaults to (0, 0).
+            size (int): The size of the square sides.
+            position (tuple): The coordinates of the square.
         """
         self.size = size
         self.position = position
@@ -56,7 +56,7 @@ class Square:
         Retrieves the position of the square.
 
         Returns:
-            tuple: A tuple of 2 positive integers representing the coordinates.
+            tuple: A tuple of 2 positive integers.
         """
         return self.__position
 
@@ -90,8 +90,9 @@ class Square:
     def my_print(self):
         """
         Prints the square using the '#' character, taking into account
-        the horizontal and vertical offsets specified by the position attribute.
+        the horizontal and vertical offsets specified by position.
         """
+        # If size is 0, print a single empty line and exit immediately
         if self.__size == 0:
             print()
             return
