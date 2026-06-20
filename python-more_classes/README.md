@@ -24,7 +24,7 @@ This repository contains the ongoing tasks for the **0x08. Python - More Classes
 | --- | --- | --- |
 | `0-rectangle.py` | [0. Simple rectangle](./0-rectangle.py) | An empty class `Rectangle` that defines a rectangle. |
 | `1-rectangle.py` | [1. Real definition of a rectangle](./1-rectangle.py) | A class `Rectangle` that defines a rectangle with private attributes, validation, and properties. |
-
+| `2-rectangle.py` | [2. Area and Perimeter](./2-rectangle.py) | A class `Rectangle` that defines a rectangle with public methods for area and perimeter calculations. |
 ---
 
 ## Tasks Overview
