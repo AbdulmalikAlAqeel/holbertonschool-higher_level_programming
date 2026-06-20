@@ -30,6 +30,7 @@ This repository contains the ongoing tasks for the **0x08. Python - More Classes
 | `5-rectangle.py` | [5. Detect instance deletion](./5-rectangle.py) | A class `Rectangle` that implements a destructor method (`__del__`) to print a message when an instance is deleted. |
 | `6-rectangle.py` | [6. How many instances](./6-rectangle.py) | A class `Rectangle` that introduces a public class attribute to dynamically track the number of active instances. |
 | `7-rectangle.py` | [7. Change representation](./7-rectangle.py) | A class `Rectangle` that introduces a customizable class/instance attribute `print_symbol` for visual drawing. |
+| `8-rectangle.py` | [8. Compare rectangles](./8-rectangle.py) | A class `Rectangle` that implements a static method `bigger_or_equal` to compare two rectangle areas. |
 ---
 
 ## Tasks Overview
