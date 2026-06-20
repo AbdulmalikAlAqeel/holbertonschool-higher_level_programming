@@ -1,7 +1,7 @@
 # 0x08. Python - More Classes and Objects
 
 ## Description
-This repository contains the first task of the **0x08. Python - More Classes and Objects** project at Holberton School. The goal of this project is to dive deeper into Object-Oriented Programming (OOP) in Python 3, moving beyond basic class definitions to understand data encapsulation, attributes, and methods.
+This repository contains the ongoing tasks for the **0x08. Python - More Classes and Objects** project. This project deepens the understanding of Object-Oriented Programming (OOP) in Python 3, specifically focusing on data encapsulation, private attributes, properties, getters, and setters.
 
 ---
 
@@ -14,29 +14,52 @@ This repository contains the first task of the **0x08. Python - More Classes and
   * The first line of all files must be exactly `#!/usr/bin/python3`.
   * All files must be executable (`chmod +x`).
 * **Coding Style:** Your code must adhere to the `pycodestyle` (version 2.7.*) style guide.
-* **Documentation:** All modules and classes must have a proper, clear documentation string (docstring).
+* **Documentation:** All modules, classes, and methods must have a proper, clear documentation string (docstring).
 
 ---
 
-## Tasks
+## Project Directory Structure
 
-### 0. Simple rectangle
-**File:** `0-rectangle.py`
+| File | Task | Description |
+| --- | --- | --- |
+| `0-rectangle.py` | [0. Simple rectangle](./0-rectangle.py) | An empty class `Rectangle` that defines a rectangle. |
+| `1-rectangle.py` | [1. Real definition of a rectangle](./1-rectangle.py) | A class `Rectangle` that defines a rectangle with private attributes, validation, and properties. |
 
-Write an empty class `Rectangle` that defines a rectangle:
-* You are not allowed to import any module.
+---
 
-#### Concept Covered
-* Creating a minimal class definition in Python.
-* Understanding how Python instantiates empty objects and initializes their `__dict__` attribute.
+## Tasks Overview
+
+### 1. Real definition of a rectangle
+**File:** `1-rectangle.py`
+
+Write a class `Rectangle` that defines a rectangle by: (based on `0-rectangle.py`)
+* **Private instance attribute:** `width`
+  * Property `def width(self):` to retrieve it.
+  * Property setter `def width(self, value):` to set it:
+    * `width` must be an integer, otherwise raise a `TypeError` exception with the message `width must be an integer`.
+    * If `width` is less than `0`, raise a `ValueError` exception with the message `width must be >= 0`.
+* **Private instance attribute:** `height`
+  * Property `def height(self):` to retrieve it.
+  * Property setter `def height(self, value):` to set it:
+    * `height` must be an integer, otherwise raise a `TypeError` exception with the message `height must be an integer`.
+    * If `height` is less than `0`, raise a `ValueError` exception with the message `height must be >= 0`.
+* **Instantiation with optional width and height:** `def __init__(self, width=0, height=0):`
+
+#### Concepts Covered
+* Implementing **Data Encapsulation** and **Information Hiding**.
+* Using Python `@property` decorators for getters and setters.
+* Raising exceptions (`TypeError`, `ValueError`) to validate input dynamically during object creation and modification.
 
 #### Compilation and Testing
-You can test the implementation using the following main file (`0-main.py`):
+You can test the implementation using the following main file (`1-main.py`):
 
 ```python
 #!/usr/bin/python3
-Rectangle = __import__('0-rectangle').Rectangle
+Rectangle = __import__('1-rectangle').Rectangle
 
-my_rectangle = Rectangle()
-print(type(my_rectangle))
+my_rectangle = Rectangle(2, 4)
+print(my_rectangle.__dict__)
+
+my_rectangle.width = 10
+my_rectangle.height = 3
 print(my_rectangle.__dict__)
