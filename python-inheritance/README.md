@@ -37,3 +37,52 @@ print(lookup(MyClass1))
 
 $ ./0-main.py
 ['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__']
+
+
+
+
+# 0x0A. Python - Inheritance - Task 1
+
+This directory contains the implementation and test cases for Task 1 of the Python Inheritance project. It demonstrates how to inherit from Python's built-in `list` class and extend its functionality by adding a custom method.
+
+## Requirements
+
+* **Operating System:** Ubuntu 20.04 LTS
+* **Language:** Python 3.8.5
+* **Style Guide:** `pycodestyle` version 2.7.*
+* **Executables:** All scripts must be executable and end with a new line.
+* **Testing:** Test cases must be text-based (`.txt`) and placed inside the `tests` directory.
+
+---
+
+## Tasks
+
+### 1. My list (Mandatory)
+A Python class `MyList` that inherits from the built-in `list` class.
+
+* **File:** `1-my_list.py`
+* **Test File:** `tests/1-my_list.txt`
+* **Public Instance Method:** `def print_sorted(self):`
+    * Prints the elements of the list in ascending sorted order.
+    * Assumes all elements in the list are integers.
+    * Does **not** modify the original order of the list.
+* **Constraints:** No modules can be imported.
+
+---
+
+## Code Example
+
+```python
+#!/usr/bin/python3
+MyList = __import__('1-my_list').MyList
+
+my_list = MyList()
+my_list.append(1)
+my_list.append(4)
+my_list.append(2)
+my_list.append(3)
+my_list.append(5)
+
+print(my_list)
+my_list.print_sorted()
+print(my_list)

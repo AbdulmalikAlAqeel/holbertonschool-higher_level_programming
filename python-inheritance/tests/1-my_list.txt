@@ -1,0 +1,33 @@
+===============================
+How to use the 1-my_list module
+===============================
+
+First, let's look up the MyList class:
+    >>> MyList = __import__('1-my_list').MyList
+
+We can create an empty list instance:
+    >>> my_list = MyList()
+    >>> print(my_list)
+    []
+
+We can append normal integer elements:
+    >>> my_list.append(1)
+    >>> my_list.append(4)
+    >>> my_list.append(2)
+    >>> my_list.append(3)
+    >>> my_list.append(5)
+    >>> print(my_list)
+    [1, 4, 2, 3, 5]
+
+Now, let's print the sorted version:
+    >>> my_list.print_sorted()
+    [1, 2, 3, 4, 5]
+
+The original list must remain untouched:
+    >>> print(my_list)
+    [1, 4, 2, 3, 5]
+
+It should work fine with negative values too:
+    >>> neg_list = MyList([-1, -10, 5, 0])
+    >>> neg_list.print_sorted()
+    [-10, -1, 0, 5]
