@@ -10,6 +10,10 @@ We can create an empty list instance:
     >>> print(my_list)
     []
 
+Now, let's check print_sorted() with an empty list:
+    >>> my_list.print_sorted()
+    []
+
 We can append normal integer elements:
     >>> my_list.append(1)
     >>> my_list.append(4)
