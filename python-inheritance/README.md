@@ -415,3 +415,49 @@ To verify the implementation, execute the test file:
 
 ```bash
 ./9-main.py
+
+
+
+# Project: Python - Inheritance
+
+## Task 10: Square #1
+
+### Description
+This task introduces the concept of multi-level inheritance and polymorphism by implementing a `Square` class that inherits directly from the `Rectangle` class (`9-rectangle.py`), which in turn inherits from `BaseGeometry`. Since a square is a specific case of a rectangle where the width equals the height, this implementation leverages code reuse via the `super()` function.
+
+---
+
+### Key Implementations
+* **Multi-level Inheritance:** `Square` $\rightarrow$ `Rectangle` $\rightarrow$ `BaseGeometry`.
+* **Code Reuse:** Instead of rewriting validation or area computation, the `Square` class calls `super().__init__(size, size)`. This automatically handles both the `integer_validator` and sets up the dimensions for the inherited `area()` and `__str__` methods.
+* **Attributes:** `size` is kept as a private instance attribute (`__size`).
+
+---
+
+### Requirements
+* Must inherit from `Rectangle`.
+* Instantiation: `def __init__(self, size):`
+* `size` must be a private positive integer validated by `integer_validator`.
+* No explicit getter or setter methods.
+
+---
+
+### File Structure
+* `7-base_geometry.py`: Base class containing validation logic.
+* `9-rectangle.py`: Intermediate class implementing `area()` and `__str__`.
+* `10-square.py`: `Square` class definition inheriting from `Rectangle`.
+* `10-main.py`: Test script provided to verify the implementation.
+
+---
+
+### Class Diagram Hierarchy
+
+```text
+  BaseGeometry
+       ▲
+       │
+   Rectangle
+       ▲
+       │  (Inheritance)
+     Square
+       └── __size  (Private, Validated Integer)
