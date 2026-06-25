@@ -282,3 +282,59 @@ try:
     print(bg.area())
 except Exception as e:
     print("[{}] {}".format(e.__class__.__name__, e))
+
+
+
+Markdown
+# 0x0A. Python - Inheritance - Task 7
+
+This directory contains the implementation for Task 7 of the Python Inheritance project. It enhances the `BaseGeometry` class by introducing a robust integer validation method.
+
+## Requirements
+
+* **Operating System:** Ubuntu 20.04 LTS
+* **Language:** Python 3.8.5
+* **Style Guide:** `pycodestyle` version 2.7.*
+* **Executables:** All scripts must be executable and end with a new line.
+
+---
+
+## Tasks
+
+### 7. Integer validator (Mandatory)
+An improved Python class `BaseGeometry` featuring:
+* `def area(self):` raises an `Exception`.
+* `def integer_validator(self, name, value):` validates the input value.
+  * Raises `TypeError` if `value` is not an integer.
+  * Raises `ValueError` if `value` is less than or equal to 0.
+
+* **File:** `7-base_geometry.py`
+* **Constraints:** No modules can be imported.
+
+---
+
+## Code Example
+
+```python
+#!/usr/bin/python3
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+bg = BaseGeometry()
+
+bg.integer_validator("my_int", 12)
+bg.integer_validator("width", 89)
+
+try:
+    bg.integer_validator("name", "John")
+except Exception as e:
+    print("[{}] {}".format(e.__class__.__name__, e))
+
+try:
+    bg.integer_validator("age", 0)
+except Exception as e:
+    print("[{}] {}".format(e.__class__.__name__, e))
+
+try:
+    bg.integer_validator("distance", -4)
+except Exception as e:
+    print("[{}] {}".format(e.__class__.__name__, e))
