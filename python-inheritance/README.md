@@ -461,3 +461,48 @@ This task introduces the concept of multi-level inheritance and polymorphism by 
        │  (Inheritance)
      Square
        └── __size  (Private, Validated Integer)
+
+
+
+# Project: Python - Inheritance
+
+## Task 11: Square #2
+
+### Description
+This task refines the `Square` class implemented in the previous task (`10-square.py`). The objective here is to demonstrate **Method Overriding** by customizing the string representation of the `Square` object. While it still inherits its core dimensions and area calculation behavior from `Rectangle`, it now explicitly identifies itself as a `Square` when printed.
+
+---
+
+### New Features Implemented
+* **Method Overriding (`__str__`):** Overrides the `__str__` method inherited from the `Rectangle` class to return a tailored description format: `[Square] <width>/<height>`.
+* **Polymorphic Behavior:** Reuses the validation and initialization from the parent classes while defining its own distinct string representation.
+
+---
+
+### Requirements
+* Must inherit from `Rectangle`.
+* Instantiation: `def __init__(self, size):`
+* `size` must be a private positive integer validated by `integer_validator`.
+* Printing the instance or casting it to a string must yield the exact format: `[Square] <width>/<height>`.
+
+---
+
+### File Structure
+* `7-base_geometry.py`: Base class containing the validation logic.
+* `9-rectangle.py`: Intermediate class implementing `area()`.
+* `11-square.py`: Final `Square` class overriding the `__str__` method.
+* `11-main.py`: Test script provided to verify the output.
+
+---
+
+### Class Diagram Hierarchy
+
+```text
+  BaseGeometry
+       ▲
+       │
+   Rectangle [__str__ -> "[Rectangle] w/h"]
+       ▲
+       │  (Inheritance & Method Overriding)
+     Square    [__str__ -> "[Square] size/size"]
+       └── __size  (Private, Validated Integer)
