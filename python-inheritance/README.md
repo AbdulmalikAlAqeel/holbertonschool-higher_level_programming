@@ -167,3 +167,43 @@ if is_kind_of_class(a, float):
     print("{} comes from {}".format(a, float.__name__))
 if is_kind_of_class(a, object):
     print("{} comes from {}".format(a, object.__name__))
+
+
+
+# 0x0A. Python - Inheritance - Task 4
+
+This directory contains the implementation for Task 4 of the Python Inheritance project. It focuses on verifying if an object is an instance of a class that inherited (directly or indirectly) from a specified class, excluding direct instantiation.
+
+## Requirements
+
+* **Operating System:** Ubuntu 20.04 LTS
+* **Language:** Python 3.8.5
+* **Style Guide:** `pycodestyle` version 2.7.*
+* **Executables:** All scripts must be executable and end with a new line.
+
+---
+
+## Tasks
+
+### 4. Only sub class of (Mandatory)
+A Python function that returns `True` if the object is an instance of a class that inherited (directly or indirectly) from the specified class; otherwise `False`.
+
+* **File:** `4-inherits_from.py`
+* **Prototype:** `def inherits_from(obj, a_class):`
+* **Constraints:** No modules can be imported.
+
+---
+
+## Code Example
+
+```python
+#!/usr/bin/python3
+inherits_from = __import__('4-inherits_from').inherits_from
+
+a = True
+if inherits_from(a, int):
+    print("{} inherited from class {}".format(a, int.__name__))
+if inherits_from(a, bool):
+    print("{} inherited from class {}".format(a, bool.__name__))
+if inherits_from(a, object):
+    print("{} inherited from class {}".format(a, object.__name__))
