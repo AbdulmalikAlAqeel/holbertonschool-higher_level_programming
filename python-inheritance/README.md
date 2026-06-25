@@ -338,3 +338,41 @@ try:
     bg.integer_validator("distance", -4)
 except Exception as e:
     print("[{}] {}".format(e.__class__.__name__, e))
+
+
+
+# Project: Python - Inheritance
+
+## Task 8: Rectangle
+
+### Description
+In this task, a class `Rectangle` is implemented that inherits from the previously created `BaseGeometry` class (`7-base_geometry.py`). This project focuses on implementing object-oriented programming (OOP) principles in Python, specifically inheritance, private instance attributes, and method reuse for input validation.
+
+---
+
+### Requirements
+* **Inheritance:** Must inherit from `BaseGeometry`.
+* **Instantiation:** `def __init__(self, width, height):`
+* **Attributes:** `width` and `height` must be private instance attributes (`__width` and `__height`).
+* **Encapsulation:** No getter or setter methods are allowed.
+* **Validation:** Both `width` and `height` must be validated as positive integers using the inherited `integer_validator` method.
+* **Style:** Code complies with `pycodestyle` guidelines.
+
+---
+
+### File Structure
+* `7-base_geometry.py`: Contains the parent class `BaseGeometry` with the validation logic.
+* `8-rectangle.py`: Contains the `Rectangle` class definition.
+* `8-main.py`: Test file provided by the school to verify compliance.
+
+---
+
+### Class Diagram Overview
+
+```text
+  BaseGeometry
+       ▲
+       │  (Inheritance)
+   Rectangle
+     ├── __width  (Private, Validated Integer)
+     └── __height (Private, Validated Integer)
