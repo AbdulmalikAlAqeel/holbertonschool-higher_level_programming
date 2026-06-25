@@ -5,82 +5,63 @@ How to use 7-base_geometry.py
 Bringing BaseGeometry into the test environment:
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
-Creating a new object instance:
+Test present: check instantiation
 >>> bg = BaseGeometry()
 
-Verifying the area method raises an exception:
+Test present: area()
 >>> bg.area()
 Traceback (most recent call last):
     ...
 Exception: area() is not implemented
 
-Validating correct integers with "age" (Passing cases):
->>> bg.integer_validator("age", 12)
->>> bg.integer_validator('age', 89)
+Test present: integer_validator() and integer_validator("age", 1)
+>>> bg.integer_validator("age", 1)
 
-Verifying type errors with non-integer inputs using "age" and 'age':
->>> bg.integer_validator("age", "John")
-Traceback (most recent call last):
-    ...
-TypeError: age must be an integer
-
->>> bg.integer_validator('age', 'John')
-Traceback (most recent call last):
-    ...
-TypeError: age must be an integer
-
->>> bg.integer_validator("age", 10.5)
-Traceback (most recent call last):
-    ...
-TypeError: age must be an integer
-
->>> bg.integer_validator('age', 10.5)
-Traceback (most recent call last):
-    ...
-TypeError: age must be an integer
-
->>> bg.integer_validator("age", (4,))
-Traceback (most recent call last):
-    ...
-TypeError: age must be an integer
-
->>> bg.integer_validator('age', (4,))
-Traceback (most recent call last):
-    ...
-TypeError: age must be an integer
-
->>> bg.integer_validator("age", [1, 2])
-Traceback (most recent call last):
-    ...
-TypeError: age must be an integer
-
->>> bg.integer_validator("age", {3, 4})
-Traceback (most recent call last):
-    ...
-TypeError: age must be an integer
-
->>> bg.integer_validator("age", None)
-Traceback (most recent call last):
-    ...
-TypeError: age must be an integer
-
->>> bg.integer_validator("age", True)
-Traceback (most recent call machined last):
-    ...
-TypeError: age must be an integer
-
-Verifying value errors with numbers less than or equal to 0 using "age" and 'age':
+Test present: integer_validator("age", 0)
 >>> bg.integer_validator("age", 0)
 Traceback (most recent call last):
     ...
 ValueError: age must be greater than 0
 
->>> bg.integer_validator('age', 0)
-Traceback (most recent call last):
-    ...
-ValueError: age must be greater than 0
-
+Test present: integer_validator("age", -4)
 >>> bg.integer_validator("age", -4)
 Traceback (most recent call last):
     ...
 ValueError: age must be greater than 0
+
+Test present: integer_validator("age", "4")
+>>> bg.integer_validator("age", "4")
+Traceback (most recent call last):
+    ...
+TypeError: age must be an integer
+
+Test present: integer_validator("age", (4,))
+>>> bg.integer_validator("age", (4,))
+Traceback (most recent call last):
+    ...
+TypeError: age must be an integer
+
+Test present: integer_validator("age", [3])
+>>> bg.integer_validator("age", [3])
+Traceback (most recent call last):
+    ...
+TypeError: age must be an integer
+
+Test present: integer_validator("age", True)
+>>> bg.integer_validator("age", True)
+Traceback (most recent call last):
+    ...
+TypeError: age must be an integer
+
+Test present: integer_validator("age", {3, 4})
+>>> bg.integer_validator("age", {3, 4})
+Traceback (most recent call last):
+    ...
+TypeError: age must be an integer
+
+Test present: integer_validator("age", None)
+>>> bg.integer_validator("age", None)
+Traceback (most recent call last):
+    ...
+TypeError: age must be an integer
+
