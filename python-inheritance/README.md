@@ -376,3 +376,42 @@ In this task, a class `Rectangle` is implemented that inherits from the previous
    Rectangle
      ├── __width  (Private, Validated Integer)
      └── __height (Private, Validated Integer)
+
+
+
+# Project: Python - Inheritance
+
+## Task 9: Full Rectangle
+
+### Description
+This task extends the implementation of the `Rectangle` class from the previous task. It incorporates the complete geometric functionality by defining the actual area calculation and customizing the string representation of the object when printed or cast to a string.
+
+---
+
+### New Features implemented
+* **Area Calculation:** Overrides and fully implements the `area()` method from the parent class to compute and return the rectangle's area ($width \times height$).
+* **Custom String Representation:** Implements the `__str__` magic method to return a formatted description of the rectangle: `[Rectangle] <width>/<height>`.
+
+---
+
+### Requirements
+* Must inherit from `BaseGeometry`.
+* Instantiation with private attributes: `__width` and `__height`.
+* Proper input validation using `integer_validator`.
+* Code strictly complies with `pycodestyle` formatting rules.
+
+---
+
+### File Structure
+* `7-base_geometry.py`: Parent class with data validation logic.
+* `9-rectangle.py`: Full `Rectangle` class implementation with `area()` and `__str__`.
+* `9-main.py`: Test script provided to verify the output.
+
+---
+
+### Usage & Example
+
+To verify the implementation, execute the test file:
+
+```bash
+./9-main.py
