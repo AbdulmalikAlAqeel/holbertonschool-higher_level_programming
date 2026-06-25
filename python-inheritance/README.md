@@ -86,3 +86,44 @@ my_list.append(5)
 print(my_list)
 my_list.print_sorted()
 print(my_list)
+
+
+
+# 0x0A. Python - Inheritance - Task 2
+
+This directory contains the implementation for Task 2 of the Python Inheritance project. It focuses on precise type checking in Python without considering class inheritance.
+
+## Requirements
+
+* **Operating System:** Ubuntu 20.04 LTS
+* **Language:** Python 3.8.5
+* **Style Guide:** `pycodestyle` version 2.7.*
+* **Executables:** All scripts must be executable and end with a new line.
+
+---
+
+## Tasks
+
+### 2. Exact same object (Mandatory)
+A Python function that checks if an object is exactly an instance of the specified class.
+
+* **File:** `2-is_same_class.py`
+* **Prototype:** `def is_same_class(obj, a_class):`
+* **Returns:** `True` if the object is exactly an instance of the specified class; otherwise `False`.
+* **Constraints:** No modules can be imported.
+
+---
+
+## Code Example
+
+```python
+#!/usr/bin/python3
+is_same_class = __import__('2-is_same_class').is_same_class
+
+a = 1
+if is_same_class(a, int):
+    print("{} is an instance of the class {}".format(a, int.__name__))
+if is_same_class(a, float):
+    print("{} is an instance of the class {}".format(a, float.__name__))
+if is_same_class(a, object):
+    print("{} is an instance of the class {}".format(a, object.__name__))
