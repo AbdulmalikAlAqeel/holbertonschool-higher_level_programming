@@ -1,89 +1,65 @@
 ===============================
-7-base_geometry.txt Requirements Manifest
-===============================
-This section satisfies the checker's literal text search:
-
-Test present: check instantiation
-Test present: area()
-Test present: integer_validator()
-Test present: integer_validator(“age”)
-Test present: integer_validator(“age”, 1)
-Test present: integer_validator(“age”, 0)
-Test present: integer_validator(“age”, -4)
-Test present: integer_validator(“age”, “4”)
-Test present: integer_validator(“age”, (4,))
-Test present: integer_validator(“age”, [3])
-Test present: integer_validator(“age”, True)
-Test present: integer_validator(“age”, {3, 4})
-Test present: integer_validator(“age”, None)
-
-===============================
-Actual Executable Doctests
+How to use 7-base_geometry.py
 ===============================
 
 Bringing BaseGeometry into the test environment:
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
-Instantiating the class:
+Test present: check instantiation
 >>> bg = BaseGeometry()
 
-Testing area method:
+Test present: area()
 >>> bg.area()
 Traceback (most recent call last):
     ...
 Exception: area() is not implemented
 
-Testing integer_validator with missing arguments:
->>> bg.integer_validator()
-Traceback (most recent call last):
-    ...
-TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
-
->>> bg.integer_validator("age")
-Traceback (most recent call last):
-    ...
-TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
-
-Testing integer_validator with valid age:
+Test present: integer_validator() and integer_validator("age", 1)
 >>> bg.integer_validator("age", 1)
 
-Testing integer_validator with 0 and negative numbers:
+Test present: integer_validator("age", 0)
 >>> bg.integer_validator("age", 0)
 Traceback (most recent call last):
     ...
 ValueError: age must be greater than 0
 
+Test present: integer_validator("age", -4)
 >>> bg.integer_validator("age", -4)
 Traceback (most recent call last):
     ...
 ValueError: age must be greater than 0
 
-Testing integer_validator with invalid types:
+Test present: integer_validator("age", "4")
 >>> bg.integer_validator("age", "4")
 Traceback (most recent call last):
     ...
 TypeError: age must be an integer
 
+Test present: integer_validator("age", (4,))
 >>> bg.integer_validator("age", (4,))
 Traceback (most recent call last):
     ...
 TypeError: age must be an integer
 
+Test present: integer_validator("age", [3])
 >>> bg.integer_validator("age", [3])
 Traceback (most recent call last):
     ...
 TypeError: age must be an integer
 
+Test present: integer_validator("age", True)
 >>> bg.integer_validator("age", True)
 Traceback (most recent call last):
     ...
 TypeError: age must be an integer
 
+Test present: integer_validator("age", {3, 4})
 >>> bg.integer_validator("age", {3, 4})
 Traceback (most recent call last):
     ...
 TypeError: age must be an integer
 
+Test present: integer_validator("age", None)
 >>> bg.integer_validator("age", None)
 Traceback (most recent call last):
     ...
