@@ -244,3 +244,41 @@ bg = BaseGeometry()
 
 print(bg)
 print(dir(bg))
+
+
+
+# 0x0A. Python - Inheritance - Task 6
+
+This directory contains the implementation for Task 6 of the Python Inheritance project. It improves the `BaseGeometry` class by adding a placeholder method for area calculations that enforces overriding in subclasses.
+
+## Requirements
+
+* **Operating System:** Ubuntu 20.04 LTS
+* **Language:** Python 3.8.5
+* **Style Guide:** `pycodestyle` version 2.7.*
+* **Executables:** All scripts must be executable and end with a new line.
+
+---
+
+## Tasks
+
+### 6. Improve Geometry (Mandatory)
+A Python class `BaseGeometry` with a public instance method `def area(self):` that raises an `Exception` with the message `area() is not implemented`.
+
+* **File:** `6-base_geometry.py`
+* **Prototype:** `def area(self):`
+* **Constraints:** No modules can be imported.
+
+---
+
+## Code Example
+
+```python
+#!/usr/bin/python3
+BaseGeometry = __import__('6-base_geometry').BaseGeometry
+
+bg = BaseGeometry()
+try:
+    print(bg.area())
+except Exception as e:
+    print("[{}] {}".format(e.__class__.__name__, e))
