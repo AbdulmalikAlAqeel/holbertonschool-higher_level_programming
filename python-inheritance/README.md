@@ -127,3 +127,43 @@ if is_same_class(a, float):
     print("{} is an instance of the class {}".format(a, float.__name__))
 if is_same_class(a, object):
     print("{} is an instance of the class {}".format(a, object.__name__))
+
+
+
+# 0x0A. Python - Inheritance - Task 3
+
+This directory contains the implementation for Task 3 of the Python Inheritance project. It focuses on checking if an object is an instance of a class, or an instance of a subclass that inherited from the specified class.
+
+## Requirements
+
+* **Operating System:** Ubuntu 20.04 LTS
+* **Language:** Python 3.8.5
+* **Style Guide:** `pycodestyle` version 2.7.*
+* **Executables:** All scripts must be executable and end with a new line.
+
+---
+
+## Tasks
+
+### 3. Same class or inherit from (Mandatory)
+A Python function that returns `True` if the object is an instance of, or if the object is an instance of a class that inherited from, the specified class; otherwise `False`.
+
+* **File:** `3-is_kind_of_class.py`
+* **Prototype:** `def is_kind_of_class(obj, a_class):`
+* **Constraints:** No modules can be imported.
+
+---
+
+## Code Example
+
+```python
+#!/usr/bin/python3
+is_kind_of_class = __import__('3-is_kind_of_class').is_kind_of_class
+
+a = 1
+if is_kind_of_class(a, int):
+    print("{} comes from {}".format(a, int.__name__))
+if is_kind_of_class(a, float):
+    print("{} comes from {}".format(a, float.__name__))
+if is_kind_of_class(a, object):
+    print("{} comes from {}".format(a, object.__name__))
