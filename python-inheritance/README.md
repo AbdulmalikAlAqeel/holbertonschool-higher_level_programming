@@ -207,3 +207,40 @@ if inherits_from(a, bool):
     print("{} inherited from class {}".format(a, bool.__name__))
 if inherits_from(a, object):
     print("{} inherited from class {}".format(a, object.__name__))
+
+
+
+# 0x0A. Python - Inheritance - Task 5
+
+This directory contains the implementation for Task 5 of the Python Inheritance project. It establishes the foundational empty class `BaseGeometry` which will be expanded in subsequent tasks.
+
+## Requirements
+
+* **Operating System:** Ubuntu 20.04 LTS
+* **Language:** Python 3.8.5
+* **Style Guide:** `pycodestyle` version 2.7.*
+* **Executables:** All scripts must be executable and end with a new line.
+
+---
+
+## Tasks
+
+### 5. Geometry module (Mandatory)
+An empty Python class `BaseGeometry` that serves as the base for future geometry structures.
+
+* **File:** `5-base_geometry.py`
+* **Prototype:** `class BaseGeometry:`
+* **Constraints:** No modules can be imported.
+
+---
+
+## Code Example
+
+```python
+#!/usr/bin/python3
+BaseGeometry = __import__('5-base_geometry').BaseGeometry
+
+bg = BaseGeometry()
+
+print(bg)
+print(dir(bg))
