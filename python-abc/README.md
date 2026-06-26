@@ -207,3 +207,45 @@ To run the verification script and see multiple inheritance in action, execute:
 ```bash
 chmod +x main_04_flyingfish.py
 ./main_04_flyingfish.py
+
+
+
+# Project: Python - Abstract Base Classes (ABC)
+
+## Task 5: The Mystical Dragon - Mastering Mixins
+
+### Description
+This task introduces and demonstrates the **Mixin design pattern** in Python. Mixins are small, highly focused classes designed to provide specific, reusable behaviors to other classes through multiple inheritance. 
+
+Unlike traditional parent classes, mixins are not meant to stand alone or be instantiated on their own. By constructing `SwimMixin` and `FlyMixin` and combining them into a `Dragon` class, this exercise showcases how to achieve horizontal code reusability and implement **Composition over Inheritance** without creating deep, rigid, or fragile inheritance hierarchies.
+
+---
+
+### Key Concepts Implemented
+* **Mixin Design Pattern:** Building discrete, single-purpose classes that inject distinct capabilities into target classes.
+* **Behavior Composition:** Combining multiple independent behavioral components (`SwimMixin` + `FlyMixin`) to dynamically construct a complex class (`Dragon`).
+* **Modular Code Reuse:** Designing decoupled capabilities that can be easily plugged into any other unrelated class architectures (e.g., Duck, Airplane) in the future.
+
+---
+
+### File Structure
+* `python-abc/` (Directory)
+  * `task_05_dragon.py`: Contains the `SwimMixin`, `FlyMixin`, and the composed `Dragon` class definitions.
+  * `main_05_dragon.py`: Test script provided to verify the composite capabilities of the dragon instance.
+
+---
+
+### Requirements
+* Strict compliance with `pycodestyle` formatting standards (all lines under 79 characters).
+* Complete, comprehensive Python Docstrings for all mixin classes, target classes, and individual methods.
+* Correct encapsulation ensuring behaviors remain independent and reusable.
+
+---
+
+### Usage & Expected Output
+
+To run the verification script and observe the modular mixin behaviors, execute:
+
+```bash
+chmod +x main_05_dragon.py
+./main_05_dragon.py
