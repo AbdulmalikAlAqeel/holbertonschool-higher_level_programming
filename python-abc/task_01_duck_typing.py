@@ -61,10 +61,11 @@ class Rectangle(Shape):
 
 
 def shape_info(shape):
-    """Print the area and perimeter of any object implementing the shape interface.
+    """Print the area and perimeter of a shape object.
 
-    This function utilizes duck typing, meaning it calls .area() and .perimeter()
-    without explicitly checking the object's class type via isinstance.
+    This function utilizes duck typing, meaning it calls
+    .area() and .perimeter() without explicitly checking
+    the object's class type via isinstance.
     """
     print("Area: {}".format(shape.area()))
     print("Perimeter: {}".format(shape.perimeter()))

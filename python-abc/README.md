@@ -37,3 +37,45 @@ To execute the verification script and see how the enforcement rules apply, run:
 ```bash
 chmod +x main_00_abc.py
 ./main_00_abc.py
+
+
+
+# Project: Python - Abstract Base Classes (ABC)
+
+## Task 1: Shapes, Interfaces, and Duck Typing
+
+### Description
+This task demonstrates the power of **Duck Typing** and **Polymorphism** in Python, combined with the structural enforcement of Abstract Base Classes (ABCs). 
+
+An abstract class `Shape` is defined with two abstract methods: `area()` and `perimeter()`. Two concrete subclasses, `Circle` and `Rectangle`, inherit from `Shape` and provide their specific mathematical implementations. Finally, a standalone function `shape_info()` utilizes duck typing to interact with these shapes uniformly without explicitly verifying their class types.
+
+---
+
+### Key Concepts Implemented
+* **Duck Typing:** The `shape_info()` function calls `.area()` and `.perimeter()` by relying entirely on the object's behavior rather than its explicit class inheritance or type checks (avoiding `isinstance`).
+* **Dynamic Polymorphism:** Handling different geometric shapes through a unified interface cleanly and dynamically.
+* **Precise Math Integration:** Utilizing Python's built-in `math` module for accurate circle area and perimeter calculations using $\pi$.
+
+---
+
+### File Structure
+* `python-abc/` (Directory)
+  * `task_01_duck_typing.py`: Contains the `Shape` ABC, `Circle` and `Rectangle` subclasses, and the standalone `shape_info()` function.
+  * `main_01_duck_typing.py`: Test script provided to verify the output and duck typing compliance.
+
+---
+
+### Requirements
+* Strictly zero `pycodestyle` style warnings or violations (e.g., adhering to the maximum 79-character line limit).
+* Full documentation (Docstrings) for the module, every class, and every method.
+* Avoid using type checks like `isinstance` within the `shape_info` helper function.
+
+---
+
+### Usage & Expected Output
+
+To execute the verification script and see duck typing in action, run:
+
+```bash
+chmod +x main_01_duck_typing.py
+./main_01_duck_typing.py
