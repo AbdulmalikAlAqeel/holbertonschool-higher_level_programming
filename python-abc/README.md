@@ -79,3 +79,46 @@ To execute the verification script and see duck typing in action, run:
 ```bash
 chmod +x main_01_duck_typing.py
 ./main_01_duck_typing.py
+
+
+
+# Project: Python - Abstract Base Classes (ABC)
+
+## Task 2: Extending the Python List with Notifications
+
+### Description
+This task demonstrates how to extend Python's built-in classes to modify or augment their native behavior. By inheriting from the standard `list` class, we create a custom class named `VerboseList`. 
+
+This class retains all standard list functionalities but introduces real-time terminal notifications whenever items are added (via `append` or `extend`) or removed (via `remove` or `pop`), showcasing method overriding and the proper application of the `super()` function.
+
+---
+
+### Key Concepts Implemented
+* **Extending Built-in Classes:** Inheriting directly from `list` to subclass core Python data structures.
+* **Method Overriding:** Redefining core methods (`append`, `extend`, `remove`, `pop`) to execute custom notification logic alongside original operations.
+* **The `super()` Function:** Delegating execution back to the parent class (`list`) to ensure underlying memory management and list operations remain intact.
+* **State Management:** Measuring state deltas (e.g., list length before and after an operation) to report precise structural changes.
+
+---
+
+### File Structure
+* `python-abc/` (Directory)
+  * `task_02_verboselist.py`: Contains the definition of the `VerboseList` class with overridden notification methods.
+  * `main_02_verboselist.py`: Test script provided to verify list interactions and console outputs.
+
+---
+
+### Requirements
+* Zero `pycodestyle` formatting errors or line-length warnings (lines kept under 79 characters).
+* Robust and meaningful documentation (Docstrings) for the module, class, and all overridden methods.
+* Preserving standard return values (such as `pop()` returning the removed element).
+
+---
+
+### Usage & Expected Output
+
+To execute the verification script and observe the verbose logging, run:
+
+```bash
+chmod +x main_02_verboselist.py
+./main_02_verboselist.py
