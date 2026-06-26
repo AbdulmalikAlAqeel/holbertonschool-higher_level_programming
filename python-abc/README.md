@@ -164,3 +164,46 @@ To execute the verification script and see the iterator counter in action, run:
 ```bash
 chmod +x main_03_countediterator.py
 ./main_03_countediterator.py
+
+
+
+# Project: Python - Abstract Base Classes (ABC)
+
+## Task 4: The Enigmatic FlyingFish - Exploring Multiple Inheritance
+
+### Description
+This task explores the concept of **Multiple Inheritance** in Python, a powerful feature where a subclass can inherit attributes and behaviors from more than one parent class. 
+
+By constructing a `FlyingFish` class that inherits from both a `Fish` class and a `Bird` class, this exercise demonstrates how Python resolves method name conflicts using **Method Resolution Order (MRO)**. It showcases how the order of parent classes specified during definition directly impacts the look-up hierarchy.
+
+---
+
+### Key Concepts Implemented
+* **Multiple Inheritance:** Designing a class structure where a child class (`FlyingFish`) simultaneously derives capabilities from multiple independent base classes (`Fish` and `Bird`).
+* **Method Overriding:** Customizing inherited behaviors (`swim`, `fly`, `habitat`) specifically for the subclass.
+* **Method Resolution Order (MRO):** Understanding the `C3 Linearization` algorithm that Python uses to determine the search order for methods.
+* **MRO Introspection:** Utilizing the `.mro()` method and `__mro__` attribute to audit the inheritance chain programmatically.
+
+---
+
+### File Structure
+* `python-abc/` (Directory)
+  * `task_04_flyingfish.py`: Contains the definitions for `Fish`, `Bird`, and the multi-inherited `FlyingFish` classes.
+  * `main_04_flyingfish.py`: Test script provided to instantiate the class and execute the overridden methods.
+
+---
+
+### Requirements
+* Full compliance with `pycodestyle` formatting rules (lines strict under 79 characters).
+* Complete and descriptive documentation (Docstrings) for all classes and methods.
+* Proper ordering of base classes to align with the expected execution behavior.
+
+---
+
+### Usage & Expected Output
+
+To run the verification script and see multiple inheritance in action, execute:
+
+```bash
+chmod +x main_04_flyingfish.py
+./main_04_flyingfish.py
