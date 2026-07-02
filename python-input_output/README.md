@@ -106,3 +106,21 @@ s_my_list = "[1, 2, 3]"
 my_list = from_json_string(s_my_list)
 print(my_list)
 print(type(my_list))
+
+
+
+### 5. Save Object to a file (Mandatory)
+* **File:** `5-save_to_json_file.py`
+* **Prototype:** `def save_to_json_file(my_obj, filename):`
+* **Description:** A Python function that serializes a Python object into JSON format and writes it directly into a text file. It utilizes the standard `json.dump()` method inside a safe `with` statement block. It does not manage exceptions for non-serializable objects internally.
+
+## Usage & Testing
+To verify saving an object directly to a JSON file, you can execute the provided script (`5-main.py`):
+
+```python
+#!/usr/bin/python3
+save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
+
+filename = "my_list.json"
+my_list = [1, 2, 3]
+save_to_json_file(my_list, filename)
