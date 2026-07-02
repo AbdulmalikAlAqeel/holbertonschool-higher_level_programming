@@ -124,3 +124,22 @@ save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
 filename = "my_list.json"
 my_list = [1, 2, 3]
 save_to_json_file(my_list, filename)
+
+
+
+### 6. Create object from a JSON file (Mandatory)
+* **File:** `6-load_from_json_file.py`
+* **Prototype:** `def load_from_json_file(filename):`
+* **Description:** A Python function that deserializes JSON data from an external text file back into its native Python object form. It relies on the standard `json.load()` function enclosed within a safe `with` block to ensure stream resources are cleared properly upon reading.
+
+## Usage & Testing
+To verify loading and reconstructing objects from a JSON file, you can run the provided script (`6-main.py`):
+
+```python
+#!/usr/bin/python3
+load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
+
+filename = "my_list.json"
+my_list = load_from_json_file(filename)
+print(my_list)
+print(type(my_list))
