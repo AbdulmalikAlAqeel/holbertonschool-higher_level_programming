@@ -87,3 +87,22 @@ my_list = [1, 2, 3]
 s_my_list = to_json_string(my_list)
 print(s_my_list)
 print(type(s_my_list))
+
+
+
+### 4. From JSON string to Object (Mandatory)
+* **File:** `4-from_json_string.py`
+* **Prototype:** `def from_json_string(my_str):`
+* **Description:** A Python function that deserializes a JSON string back into its corresponding Python data structure (e.g., `list`, `dict`). It utilizes the standard `json.loads()` method. It assumes the input string is valid JSON, so internal exception management is omitted.
+
+## Usage & Testing
+To verify the JSON deserialization process, you can execute the provided script (`4-main.py`):
+
+```python
+#!/usr/bin/python3
+from_json_string = __import__('4-from_json_string').from_json_string
+
+s_my_list = "[1, 2, 3]"
+my_list = from_json_string(s_my_list)
+print(my_list)
+print(type(my_list))
