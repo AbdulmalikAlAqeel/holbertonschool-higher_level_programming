@@ -34,3 +34,20 @@ To test the function, you can use a main execution file like this:
 read_file = __import__('0-read_file').read_file
 
 read_file("my_file_0.txt")
+
+
+
+### 1. Write to a file (Mandatory)
+* **File:** `1-write_file.py`
+* **Prototype:** `def write_file(filename="", text=""):`
+* **Description:** A Python function that writes a string to a text file using `UTF-8` encoding. It automatically handles file creation if it does not exist, or overwrites its content if it already exists. The function utilizes the `with` statement for clean-up and returns the total number of characters successfully written.
+
+## Usage & Testing
+To test the file-writing function, you can create a test runner script (`1-main.py`):
+
+```python
+#!/usr/bin/python3
+write_file = __import__('1-write_file').write_file
+
+nb_characters = write_file("my_first_file.txt", "This School is so cool!\n")
+print(nb_characters)
