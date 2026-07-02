@@ -51,3 +51,39 @@ write_file = __import__('1-write_file').write_file
 
 nb_characters = write_file("my_first_file.txt", "This School is so cool!\n")
 print(nb_characters)
+
+
+
+### 2. Append to a file (Mandatory)
+* **File:** `2-append_write.py`
+* **Prototype:** `def append_write(filename="", text=""):`
+* **Description:** A Python function that appends a string to the end of a text file using `UTF-8` encoding. If the target file does not exist, it automatically creates it. It relies on the `with` statement for efficient stream handling and returns the exact number of characters appended.
+
+## Usage & Testing
+To test the appending capability, use the provided main execution script (`2-main.py`):
+
+```python
+#!/usr/bin/python3
+append_write = __import__('2-append_write').append_write
+
+nb_characters_added = append_write("file_append.txt", "This School is so cool!\n")
+print(nb_characters_added)
+
+
+
+### 3. To JSON string (Mandatory)
+* **File:** `3-to_json_string.py`
+* **Prototype:** `def to_json_string(my_obj):`
+* **Description:** A Python function that returns the JSON string representation of an object (Serialization). It utilizes the standard `json.dumps()` method. Exception handling for non-serializable objects is not managed within the function, allowing standard Python exceptions to propagate naturally.
+
+## Usage & Testing
+To verify the JSON serialization, you can execute the provided script (`3-main.py`):
+
+```python
+#!/usr/bin/python3
+to_json_string = __import__('3-to_json_string').to_json_string
+
+my_list = [1, 2, 3]
+s_my_list = to_json_string(my_list)
+print(s_my_list)
+print(type(s_my_list))
