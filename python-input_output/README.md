@@ -143,3 +143,33 @@ filename = "my_list.json"
 my_list = load_from_json_file(filename)
 print(my_list)
 print(type(my_list))
+
+
+
+### 7. Load, add, save (Mandatory)
+* **File:** `7-add_item.py`
+* **Dependencies:** `5-save_to_json_file.py`, `6-load_from_json_file.py`
+* **Description:** A Python script that captures all command-line arguments passed via the terminal, appends them to a continuous Python list, and dynamically serializes the list into a JSON file named `add_item.json`. It intelligently leverages previously created local modules to check for an existing file, load its current state, expand the collection, and safely write back the updated data.
+
+## Usage & Testing
+To verify loading, appending, and saving arguments using the script, you can run it directly from your terminal as follows:
+
+```bash
+# Verify the file does not exist initially
+guillaume@ubuntu:~/$ cat add_item.json
+cat: add_item.json: No such file or directory
+
+# Run with no arguments (initializes an empty list in the JSON file)
+guillaume@ubuntu:~/$ ./7-add_item.py
+guillaume@ubuntu:~/$ cat add_item.json ; echo ""
+[]
+
+# Run with new arguments
+guillaume@ubuntu:~/$ ./7-add_item.py Best School
+guillaume@ubuntu:~/$ cat add_item.json ; echo ""
+["Best", "School"]
+
+# Run again to append additional arguments to the existing list
+guillaume@ubuntu:~/$ ./7-add_item.py 89 Python C
+guillaume@ubuntu:~/$ cat add_item.json ; echo ""
+["Best", "School", "89", "Python", "C"]
