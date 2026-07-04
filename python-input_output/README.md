@@ -247,3 +247,28 @@ for student in students:
     print(type(j_student['first_name']))
     print(j_student['age'])
     print(type(j_student['age']))
+
+
+
+### 10. Student to JSON with filter (Mandatory)
+* **File:** `10-student.py`
+* **Prototype:** `def to_json(self, attrs=None):`
+* **Description:** An extension of the `Student` class that allows selective attribute serialization. The `to_json()` method accepts an optional list of strings (`attrs`). If a valid list of attribute names is provided, the method filters and returns a dictionary description containing only those matching attributes. Otherwise, it defaults to returning all valid attributes.
+
+## Usage & Testing
+To verify the filtered serialization of a `Student` instance attributes, execute the following script:
+
+```python
+#!/usr/bin/python3
+Student = __import__('10-student').Student
+
+student_1 = Student("John", "Doe", 23)
+student_2 = Student("Bob", "Dylan", 27)
+
+j_student_1 = student_1.to_json()
+j_student_2 = student_2.to_json(['first_name', 'age'])
+j_student_3 = student_2.to_json(['middle_name', 'age'])
+
+print(j_student_1)
+print(j_student_2)
+print(j_student_3)
