@@ -272,3 +272,52 @@ j_student_3 = student_2.to_json(['middle_name', 'age'])
 print(j_student_1)
 print(j_student_2)
 print(j_student_3)
+
+
+
+### 11. Student to disk and reload (Mandatory)
+* **File:** `11-student.py`
+* **Prototype:** `def reload_from_json(self, json):`
+* **Description:** An extension of the `Student` class introducing an in-place deserialization mechanism. The public method `reload_from_json` accepts a Python dictionary representation of a student and updates the state of the current instance dynamically via `setattr()`. This establishes a simple, end-to-end mechanism to save an object's structural state to disk and fully restore it later.
+
+## Usage & Testing
+To verify serializing a `Student` instance to disk and safely reloading its values into a separate instance, execute the following script:
+
+```python
+#!/usr/bin/python3
+import os
+import sys
+
+Student = __import__('11-student').Student
+read_file = __import__('0-read_file').read_file
+save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
+load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
+
+path = sys.argv[1]
+if os.path.exists(path):
+    os.remove(path)
+
+student_1 = Student("John", "Doe", 23)
+j_student_1 = student_1.to_json()
+print("Initial student:")
+print(student_1)
+print(type(student_1))
+print(type(j_student_1))
+print("{} {} {}".format(student_1.first_name, student_1.last_name, student_1.age))
+
+save_to_json_file(j_student_1, path)
+read_file(path)
+print("\nSaved to disk")
+
+print("Fake student:")
+new_student_1 = Student("Fake", "Fake", 89)
+print(new_student_1)
+print(type(new_student_1))
+print("{} {} {}".format(new_student_1.first_name, new_student_1.last_name, new_student_1.age))
+
+print("Load dictionary from file:")
+new_j_student_1 = load_from_json_file(path)
+new_student_1.reload_from_json(j_student_1)
+print(new_student_1)
+print(type(new_student_1))
+print("{} {} {}".format(new_student_1.first_name, new_student_1.last_name, new_student_1.age))
