@@ -321,3 +321,30 @@ new_student_1.reload_from_json(j_student_1)
 print(new_student_1)
 print(type(new_student_1))
 print("{} {} {}".format(new_student_1.first_name, new_student_1.last_name, new_student_1.age))
+
+
+
+### 12. Pascal's Triangle (Mandatory)
+* **File:** `12-pascal_triangle.py`
+* **Prototype:** `def pascal_triangle(n):`
+* **Description:** A Python function designed for technical interview preparation that generates Pascal's Triangle up to `n` rows. It returns a list of lists of integers representing the triangle structure. It defaults to an empty list if `n <= 0` and computes each subsequent row value sequentially by summing adjacent coefficients from the preceding row without importing any external modules.
+
+## Usage & Testing
+To verify the structural output of Pascal's Triangle generator, you can execute the following main demonstration script:
+
+```python
+#!/usr/bin/python3
+"""
+12-main
+"""
+pascal_triangle = __import__('12-pascal_triangle').pascal_triangle
+
+def print_triangle(triangle):
+    """
+    Print the triangle formatted as lists
+    """
+    for row in triangle:
+        print("[{}]".format(",".join([str(x) for x in row])))
+
+if __name__ == "__main__":
+    print_triangle(pascal_triangle(5))
