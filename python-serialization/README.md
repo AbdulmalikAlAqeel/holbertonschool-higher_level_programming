@@ -75,3 +75,36 @@ if convert_csv_to_json(csv_file):
     print(f"Data from {csv_file} has been converted to data.json")
 else:
     print(f"Failed to convert data from {csv_file}")
+
+
+
+### 3. Serializing and Deserializing with XML (Mandatory)
+* **File:** `task_03_xml.py`
+* **Prototypes:** * `def serialize_to_xml(dictionary, filename):`
+  * `def deserialize_from_xml(filename):`
+* **Description:** A Python module implementing data conversion mechanics to parse flat dictionaries into hierarchical XML document formats and vice-versa. It creates a structural root using `xml.etree.ElementTree.Element`, appends individual child leaves corresponding to the fields, and uses an iterable tree extraction parser to loop back over nodes during dictionary reconstructions.
+
+## Usage & Testing
+To confirm serialization and parsing consistency under XML rules, execute the main validation test script below:
+
+```python
+#!/usr/bin/env python3
+from task_03_xml import serialize_to_xml, deserialize_from_xml
+
+def main():
+    sample_dict = {
+        'name': 'John',
+        'age': '28',
+        'city': 'New York'
+    }
+
+    xml_file = "data.xml"
+    serialize_to_xml(sample_dict, xml_file)
+    print(f"Dictionary serialized to {xml_file}")
+
+    deserialized_data = deserialize_from_xml(xml_file)
+    print("\nDeserialized Data:")
+    print(deserialized_data)
+
+if __name__ == "__main__":
+    main()
