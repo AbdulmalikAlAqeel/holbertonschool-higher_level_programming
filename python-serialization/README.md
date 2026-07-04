@@ -26,3 +26,32 @@ print("Data serialized and saved to 'data.json'.")
 deserialized_data = load_and_deserialize('data.json')
 print("Deserialized Data:")
 print(deserialized_data)
+
+
+
+### 1. Pickling Custom Classes (Mandatory)
+* **File:** `task_01_pickle.py`
+* **Prototypes:** * `def serialize(self, filename):`
+  * `@classmethod def deserialize(cls, filename):`
+* **Description:** A Python class named `CustomObject` that demonstrates full object state persistence using Python's binary `pickle` protocol. Unlike text-based serializers (like JSON), `pickle` maps live instance variables and structural identities directly onto a binary data stream. The script safely wraps stream modifications within rigorous `try-except` blocks to prevent crash cycles during data ingestion from corrupted, broken, or non-existent files.
+
+## Usage & Testing
+To verify the lifecycle of binary object state storage and restoration, you can execute the following main test script:
+
+```python
+#!/usr/bin/env python3
+from task_01_pickle import CustomObject
+
+# Create an instance of CustomObject
+obj = CustomObject(name="John", age=25, is_student=True)
+print("Original Object:")
+obj.display()
+
+# Serialize the object
+obj.serialize("object.pkl")
+
+# Deserialize the object into a new instance
+new_obj = CustomObject.deserialize("object.pkl")
+print("\nDeserialized Object:")
+if new_obj:
+    new_obj.display()
