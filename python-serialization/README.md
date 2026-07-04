@@ -55,3 +55,23 @@ new_obj = CustomObject.deserialize("object.pkl")
 print("\nDeserialized Object:")
 if new_obj:
     new_obj.display()
+
+
+
+### 2. Converting CSV Data to JSON Format (Mandatory)
+* **File:** `task_02_csv.py`
+* **Prototype:** `def convert_csv_to_json(csv_filename):`
+* **Description:** A Python function designed to transform tabular data from a CSV file into structured, serialized JSON data written to `data.json`. It coordinates file access streams securely using a `csv.DictReader` wrapper to systematically map raw record fields directly into dynamic key-value dictionaries before final serialization. It handles errors (such as non-existent files) gracefully by returning `False`.
+
+## Usage & Testing
+To verify tabular serialization, populate a mock `data.csv` dataset and execute the following automation test script:
+
+```python
+#!/usr/bin/env python3
+from task_02_csv import convert_csv_to_json
+
+csv_file = "data.csv"
+if convert_csv_to_json(csv_file):
+    print(f"Data from {csv_file} has been converted to data.json")
+else:
+    print(f"Failed to convert data from {csv_file}")
