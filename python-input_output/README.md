@@ -173,3 +173,53 @@ guillaume@ubuntu:~/$ cat add_item.json ; echo ""
 guillaume@ubuntu:~/$ ./7-add_item.py 89 Python C
 guillaume@ubuntu:~/$ cat add_item.json ; echo ""
 ["Best", "School", "89", "Python", "C"]
+
+
+
+### 8. Class to JSON (Mandatory)
+* **File:** `8-class_to_json.py`
+* **Prototype:** `def class_to_json(obj):`
+* **Description:** A Python function that extracts the dictionary description of an object's attributes for JSON serialization. It returns a dictionary representation containing simple serializable data structures (lists, dictionaries, strings, integers, and booleans) by retrieving the object's internal `__dict__` attribute without importing any external modules.
+
+## Usage & Testing
+To verify the extraction of the dictionary description from a class instance, you can use the provided main execution files:
+
+### Testing with Public Attributes (`8-main.py`)
+```python
+#!/usr/bin/python3
+MyClass = __import__('8-my_class').MyClass
+class_to_json = __import__('8-class_to_json').class_to_json
+
+m = MyClass("John")
+m.number = 89
+print(type(m))
+print(m)
+
+mj = class_to_json(m)
+print(type(mj))
+print(mj)
+
+
+
+### 8. Class to JSON (Mandatory)
+* **File:** `8-class_to_json.py`
+* **Prototype:** `def class_to_json(obj):`
+* **Description:** A Python function that returns the dictionary description with a simple data structure (list, dictionary, string, integer, and boolean) for JSON serialization of an object. It extracts the structural data of an object instance directly by interfacing with its underlying `__dict__` attribute, mapping attribute keys to values without relying on external module imports.
+
+## Usage & Testing
+To verify the extraction of the dictionary description from a class instance, you can run the provided main execution scripts:
+
+### Standard Instance Attributes (`8-main.py`)
+```python
+#!/usr/bin/python3
+MyClass = __import__('8-my_class').MyClass
+class_to_json = __import__('8-class_to_json').class_to_json
+
+m = MyClass("John")
+m.number = 89
+print(type(m))
+print(m)
+
+mj = class_to_json(m)
+print(type(mj))
+print(mj)
