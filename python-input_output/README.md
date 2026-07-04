@@ -223,3 +223,27 @@ print(m)
 mj = class_to_json(m)
 print(type(mj))
 print(mj)
+
+
+
+### 9. Student to JSON (Mandatory)
+* **File:** `9-student.py`
+* **Prototype:** `class Student:` with method `def to_json(self):`
+* **Description:** A Python class structure defining a student by `first_name`, `last_name`, and `age`. It features a public instantiation method and a specialized public method `to_json()` that serializes the class instance attributes into a standard dictionary form using the internal `__dict__` interface without external modules.
+
+## Usage & Testing
+To verify the instantiation of a `Student` and the retrieval of its JSON-serializable dictionary format, execute the following script:
+
+```python
+#!/usr/bin/python3
+Student = __import__('9-student').Student
+
+students = [Student("John", "Doe", 23), Student("Bob", "Dylan", 27)]
+
+for student in students:
+    j_student = student.to_json()
+    print(type(j_student))
+    print(j_student['first_name'])
+    print(type(j_student['first_name']))
+    print(j_student['age'])
+    print(type(j_student['age']))
