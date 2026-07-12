@@ -32,7 +32,6 @@ class SimpleAPIHandler(BaseHTTPRequestHandler):
             self.end_headers()
             
             data = {"name": "John", "age": 30, "city": "New York"}
-            # Convert Python dictionary to a JSON string and encode it to bytes
             self.wfile.write(json.dumps(data).encode('utf-8'))
 
         # Endpoint 3: '/status' to check API health
@@ -42,7 +41,7 @@ class SimpleAPIHandler(BaseHTTPRequestHandler):
             self.end_headers()
             self.wfile.write(b"OK")
 
-        # Endpoint 4: '/info' serving metadata (As specified in expected output)
+        # Endpoint 4: '/info' serving metadata
         elif self.path == '/info':
             self.send_response(200)
             self.send_header('Content-type', 'application/json')
@@ -56,10 +55,7 @@ class SimpleAPIHandler(BaseHTTPRequestHandler):
 
         # Error Handling: Undefined endpoints (404 Not Found)
         else:
-            self.send_response(404)
-            self.send_header('Content-type', 'text/plain')
-            self.end_headers()
-            self.wfile.write(b"404 Not Found")
+            self.send_error(404, "Not Found")
 
 
 def run(server_class=HTTPServer, handler_class=SimpleAPIHandler, port=8000):
@@ -70,7 +66,6 @@ def run(server_class=HTTPServer, handler_class=SimpleAPIHandler, port=8000):
     httpd = server_class(server_address, handler_class)
     print(f"Starting server on port {port}...")
     try:
-        # Keep the server running until interrupted (Ctrl+C)
         httpd.serve_forever()
     except KeyboardInterrupt:
         print("\nStopping server.")
