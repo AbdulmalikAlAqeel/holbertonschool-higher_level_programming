@@ -59,3 +59,26 @@ This task demonstrates how to build a lightweight web server from scratch using 
 1. Fire up your terminal (or WSL instance) and run the server file:
 ```bash
 python3 task_03_http_server.py
+
+
+
+# Project: RESTful API - Task 4
+
+## Develop a Simple API using Python with Flask
+
+### Description
+This task transitions the project from a low-level native HTTP server into using **Flask**, a lightweight and modular web framework for Python. The application implements an in-memory data store using Python dictionaries to manage simulated user database profiles, handles complex HTTP routing, parses JSON payloads dynamically, and applies strict API validation rules for input parameters and errors.
+
+### Learning Objectives
+- Set up a Flask microservice environment and run a local development server.
+- Define explicit and dynamic URI routes using Flask decorators.
+- Process incoming HTTP payload states (`GET` and `POST` requests).
+- Formulate standardized JSON API outputs utilizing `jsonify()`.
+- Implement rigorous request payload validation with explicit HTTP status codes (`201`, `400`, `404`, `409`).
+
+### Prerequisites & Dependencies
+- Verified and fully compatible with **Python 3.9**.
+- Requires the installation of the Flask framework. If not present, run:
+
+```bash
+pip install Flask
