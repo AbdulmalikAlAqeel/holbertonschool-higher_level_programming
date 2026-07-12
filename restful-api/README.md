@@ -16,3 +16,46 @@ Before running the tasks, ensure you have the `requests` library installed:
 
 ```bash
 pip install requests
+
+
+
+# Project: RESTful API - Task 3
+
+## Develop a Simple API using Python with the `http.server` Module
+
+### Description
+This task demonstrates how to build a lightweight web server from scratch using only Python's standard library. By subclassing `http.server.BaseHTTPRequestHandler`, we implement low-level request handling, custom routing mechanisms, header manipulation, and manual JSON serialization without relying on any third-party frameworks like Flask or Django.
+
+### Learning Objectives
+- Set up and orchestrate a baseline HTTP web server using `http.server`.
+- Handle incoming HTTP `GET` requests using the `do_GET` routine.
+- Implement manual server-side routing based on URI paths (`self.path`).
+- Deliver various content types (`text/plain` and `application/json`) with correct response headers.
+- Handle error states by serving proper HTTP `404 Not Found` status codes and messages.
+
+### Prerequisites
+- Tested and verified under **Python 3.9**.
+- Uses internal modules only (`http.server` and `json`); no external installations are required.
+
+### Files Structure
+- **`task_03_http_server.py`**: The primary operational server file containing the request handler and server execution setup.
+
+---
+
+### Endpoints Defined
+
+| Endpoint | Content-Type | Expected Response |
+| :--- | :--- | :--- |
+| `/` | `text/plain` | `Hello, this is a simple API!` |
+| `/status` | `text/plain` | `OK` |
+| `/data` | `application/json` | `{"name": "John", "age": 30, "city": "New York"}` |
+| `/info` | `application/json` | `{"version": "1.0", "description": "A simple API built with http.server"}` |
+| *Any undefined path* | `text/plain` | `404 Not Found` |
+
+---
+
+### How to Run and Test
+
+1. Fire up your terminal (or WSL instance) and run the server file:
+```bash
+python3 task_03_http_server.py
