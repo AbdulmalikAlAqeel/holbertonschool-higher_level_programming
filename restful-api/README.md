@@ -82,3 +82,27 @@ This task transitions the project from a low-level native HTTP server into using
 
 ```bash
 pip install Flask
+
+
+
+# Project: RESTful API - Task 5
+
+## API Security and Authentication Techniques
+
+### Description
+This task focuses on securing RESTful APIs by implementing robust authentication and authorization mechanisms. It integrates two primary security strategies within a Flask application: **Basic HTTP Authentication** (using credentials validated through secure cryptographic password hashing via `werkzeug.security`) and **Token-based Authentication via JSON Web Tokens (JWT)** (using `Flask-JWT-Extended`). Furthermore, it introduces **Role-Based Access Control (RBAC)** to differentiate route privileges between standard users and administrators while enforcing unified error delivery boundaries.
+
+### Learning Objectives
+- Articulate the operational differences between Authentication and Authorization.
+- Implement stateless Basic HTTP Authentication overlays to secure endpoints.
+- Apply secure password hashing techniques (`generate_password_hash` and `check_password_hash`).
+- Build temporary stateless token handshakes using JSON Web Tokens (JWT).
+- Enforce Role-Based Access Control (RBAC) schemas to restrict unauthorized pathing.
+- Implement strict custom JWT error managers to guarantee standardized API error responses.
+
+### Prerequisites & Core Dependencies
+- Fully verified and built using **Python 3.9**.
+- Requires external security packages. Install them into your development environment via:
+
+```bash
+pip install Flask Flask-HTTPAuth Flask-JWT-Extended --break-system-packages
