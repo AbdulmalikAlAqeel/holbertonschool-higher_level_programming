@@ -102,3 +102,37 @@ This task involves writing an SQL script that safely removes/deletes the databas
 ```sql
 -- Deletes the database hbtn_0c_0 in MySQL server if it exists
 DROP DATABASE IF EXISTS hbtn_0c_0;
+
+
+
+## Task 3: List tables
+
+### Description
+This task involves writing an SQL script to list all the tables contained within a specific database on the MySQL server. The database name is passed dynamically as a command-line argument when executing the `mysql` command.
+
+### Learning Objectives
+- Learn how to inspect and discover existing tables in a relational database.
+- Practice executing SQL scripts against a specific target database using the MySQL CLI.
+- Reinforce strict formatting and syntax compliance for SQL scripts.
+
+### Requirements & Constraints
+- **File Name:** `3-list_tables.sql`
+- **Database Scope:** Passed as an argument during script execution.
+- **SQL Keywords:** Must be in **UPPERCASE** (e.g., `SHOW TABLES;`).
+- **Formatting:** File must start with a descriptive comment and end with a new line.
+
+---
+
+### File Details
+
+| File | Description | Main SQL Command |
+| :--- | :--- | :--- |
+| `3-list_tables.sql` | Lists all tables in the database provided via CLI argument. | `SHOW TABLES;` |
+
+---
+
+### Script Content (`3-list_tables.sql`)
+
+```sql
+-- Lists all tables of a database in MySQL server
+SHOW TABLES;
