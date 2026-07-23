@@ -25,7 +25,7 @@ This task focuses on writing an SQL script that retrieves and displays all the e
 | File | Description | SQL Command |
 | :--- | :--- | :--- |
 | `0-list_databases.sql` | SQL script to list all databases on the MySQL server. | `SHOW DATABASES;` |
-
+| `1-create_database_if_missing.sql` | Creates database `hbtn_0c_0` safely if it doesn't already exist. | `CREATE DATABASE IF NOT EXISTS hbtn_0c_0;` |
 ---
 
 ### Code Implementation (`0-list_databases.sql`)
@@ -33,3 +33,12 @@ This task focuses on writing an SQL script that retrieves and displays all the e
 ```sql
 -- Lists all databases of the MySQL server
 SHOW DATABASES;
+
+
+### Script Content (`1-create_database_if_missing.sql`)
+
+```sql
+-- Creates the database hbtn_0c_0 in MySQL server if it does not exist
+CREATE DATABASE IF NOT EXISTS hbtn_0c_0;
+
+
