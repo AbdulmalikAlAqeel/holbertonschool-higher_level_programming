@@ -446,3 +446,40 @@ This task involves writing an SQL script that filters and lists records from the
 ```sql
 -- Lists all records with a score >= 10 in second_table ordered by score (top first)
 SELECT score, name FROM second_table WHERE score >= 10 ORDER BY score DESC;
+
+
+
+## Task 12: Cheating is bad
+
+### Description
+This task involves writing an SQL script that updates the `score` column value for the record corresponding to `Bob` in the `second_table` table, setting it to `10`. To adhere to project constraints, the record must be targeted strictly using the `name` column without referencing Bob's `id`. The target database name is passed dynamically as a command-line argument.
+
+### Learning Objectives
+- Learn how to update existing records in a database using Data Manipulation Language (DML).
+- Master the syntax and usage of the `UPDATE` statement along with the `SET` clause.
+- Practice applying non-primary key filtering conditions in `WHERE` clauses.
+
+### Requirements & Constraints
+- **File Name:** `12-no_cheating.sql`
+- **Target Table:** `second_table`
+- **Target Record:** `name = 'Bob'`
+- **Updated Value:** `score = 10`
+- **Constraint:** Do NOT use `id` (must use `name = 'Bob'`).
+- **SQL Keywords:** Must be in **UPPERCASE** (e.g., `UPDATE`, `SET`, `WHERE`).
+- **Formatting:** File must start with a descriptive comment and end with a new line.
+
+---
+
+### File Details
+
+| File | Description | Main SQL Command |
+| :--- | :--- | :--- |
+| `12-no_cheating.sql` | Updates Bob's score to `10` in `second_table`. | `UPDATE second_table SET score = 10 WHERE name = 'Bob';` |
+
+---
+
+### Script Content (`12-no_cheating.sql`)
+
+```sql
+-- Updates the score of Bob to 10 in second_table using name field
+UPDATE second_table SET score = 10 WHERE name = 'Bob';
