@@ -409,3 +409,40 @@ This task involves writing an SQL script that lists all records from the `second
 ```sql
 -- Lists all records of second_table ordered by score (top first)
 SELECT score, name FROM second_table ORDER BY score DESC;
+
+
+
+## Task 11: Select the best
+
+### Description
+This task involves writing an SQL script that filters and lists records from the `second_table` table where the `score` is greater than or equal to `10`. The output displays the columns `score` and `name` (in that specific order) and sorts the matching results in descending order by `score` (top scores first). The target database name is passed dynamically as a command-line argument.
+
+### Learning Objectives
+- Master combining conditional filtering (`WHERE`) with result sorting (`ORDER BY`).
+- Practice relational comparison operators (`>=`).
+- Learn to filter and structure output queries effectively.
+
+### Requirements & Constraints
+- **File Name:** `11-best_score.sql`
+- **Target Table:** `second_table`
+- **Filter Condition:** `score >= 10`
+- **Output Columns:** `score`, `name` (strictly in this order).
+- **Ordering:** Ordered by `score` descending (top first).
+- **SQL Keywords:** Must be in **UPPERCASE** (e.g., `SELECT`, `FROM`, `WHERE`, `ORDER BY`, `DESC`).
+- **Formatting:** File must start with a descriptive comment and end with a new line.
+
+---
+
+### File Details
+
+| File | Description | Main SQL Command |
+| :--- | :--- | :--- |
+| `11-best_score.sql` | Selects `score` and `name` for records with `score >= 10`, ordered from highest to lowest score. | `SELECT score, name FROM second_table WHERE score >= 10 ORDER BY score DESC;` |
+
+---
+
+### Script Content (`11-best_score.sql`)
+
+```sql
+-- Lists all records with a score >= 10 in second_table ordered by score (top first)
+SELECT score, name FROM second_table WHERE score >= 10 ORDER BY score DESC;
