@@ -136,3 +136,44 @@ This task involves writing an SQL script to list all the tables contained within
 ```sql
 -- Lists all tables of a database in MySQL server
 SHOW TABLES;
+
+
+
+## Task 4: First table
+
+### Description
+This task involves writing an SQL script that creates a table named `first_table` within a specified database on the MySQL server. The script is designed to be idempotent; if `first_table` already exists, the script executes without raising an error. The target database is passed dynamically as a command-line argument.
+
+### Learning Objectives
+- Learn how to define table schemas using Data Definition Language (DDL).
+- Understand basic MySQL data types such as `INT` and `VARCHAR`.
+- Practice conditional table creation using `IF NOT EXISTS`.
+
+### Requirements & Constraints
+- **File Name:** `4-first_table.sql`
+- **Table Name:** `first_table`
+- **Columns:**
+  - `id`: `INT`
+  - `name`: `VARCHAR(256)`
+- **Forbidden Keywords:** `SELECT`, `SHOW`
+- **SQL Keywords:** Must be in **UPPERCASE** (e.g., `CREATE TABLE IF NOT EXISTS`).
+- **Formatting:** File must start with a descriptive comment and end with a new line.
+
+---
+
+### File Details
+
+| File | Description | Main SQL Command |
+| :--- | :--- | :--- |
+| `4-first_table.sql` | Creates `first_table` with `id` and `name` columns if it doesn't already exist. | `CREATE TABLE IF NOT EXISTS first_table (id INT, name VARCHAR(256));` |
+
+---
+
+### Script Content (`4-first_table.sql`)
+
+```sql
+-- Creates a table called first_table in the current database in MySQL server
+CREATE TABLE IF NOT EXISTS first_table (
+    id INT,
+    name VARCHAR(256)
+);
