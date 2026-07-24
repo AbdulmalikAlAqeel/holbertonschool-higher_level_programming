@@ -483,3 +483,38 @@ This task involves writing an SQL script that updates the `score` column value f
 ```sql
 -- Updates the score of Bob to 10 in second_table using name field
 UPDATE second_table SET score = 10 WHERE name = 'Bob';
+
+
+
+## Task 13: Score too low
+
+### Description
+This task involves writing an SQL script that removes all records from the `second_table` table where the `score` is less than or equal to `5`. The target database name is passed dynamically as a command-line argument.
+
+### Learning Objectives
+- Learn how to delete specific rows from a table using Data Manipulation Language (DML).
+- Master the syntax and safe usage of the `DELETE FROM` statement.
+- Practice using relational operators (`<=`) with conditional `WHERE` filtering.
+
+### Requirements & Constraints
+- **File Name:** `13-change_class.sql`
+- **Target Table:** `second_table`
+- **Deletion Condition:** `score <= 5`
+- **SQL Keywords:** Must be in **UPPERCASE** (e.g., `DELETE`, `FROM`, `WHERE`).
+- **Formatting:** File must start with a descriptive comment and end with a new line.
+
+---
+
+### File Details
+
+| File | Description | Main SQL Command |
+| :--- | :--- | :--- |
+| `13-change_class.sql` | Deletes all records from `second_table` where `score <= 5`. | `DELETE FROM second_table WHERE score <= 5;` |
+
+---
+
+### Script Content (`13-change_class.sql`)
+
+```sql
+-- Removes all records with a score <= 5 in the table second_table
+DELETE FROM second_table WHERE score <= 5;
