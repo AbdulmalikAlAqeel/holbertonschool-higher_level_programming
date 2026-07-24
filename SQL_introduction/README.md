@@ -553,3 +553,41 @@ This task involves writing an SQL script that computes the average score of all 
 ```sql
 -- Computes the score average of all records in second_table
 SELECT AVG(score) AS average FROM second_table;
+
+
+
+## Task 15: Number by score
+
+### Description
+This task involves writing an SQL script that groups records in `second_table` by their `score` and counts how many records exist for each unique score. The query outputs the `score` and the count of records labeled as `number`, sorted in descending order by the number of records. The target database name is passed dynamically as a command-line argument.
+
+### Learning Objectives
+- Master grouping query results using the `GROUP BY` clause.
+- Combine aggregate functions (`COUNT`) with grouping expressions.
+- Learn how to alias aggregated results (`AS number`) and sort by aggregated metrics (`ORDER BY number DESC`).
+
+### Requirements & Constraints
+- **File Name:** `15-groups.sql`
+- **Target Table:** `second_table`
+- **Output Columns:**
+  - `score`
+  - `number` (the record count for each score).
+- **Ordering:** Ordered by `number` descending (most frequent scores first).
+- **SQL Keywords:** Must be in **UPPERCASE** (e.g., `SELECT`, `COUNT`, `AS`, `FROM`, `GROUP BY`, `ORDER BY`, `DESC`).
+- **Formatting:** File must start with a descriptive comment and end with a new line.
+
+---
+
+### File Details
+
+| File | Description | Main SQL Command |
+| :--- | :--- | :--- |
+| `15-groups.sql` | Groups records by `score`, counts occurrences as `number`, and orders by count descending. | `SELECT score, COUNT(*) AS number FROM second_table GROUP BY score ORDER BY number DESC;` |
+
+---
+
+### Script Content (`15-groups.sql`)
+
+```sql
+-- Lists the number of records with the same score in second_table
+SELECT score, COUNT(*) AS number FROM second_table GROUP BY score ORDER BY number DESC;
