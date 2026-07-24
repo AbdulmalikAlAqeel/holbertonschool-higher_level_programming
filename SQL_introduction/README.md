@@ -591,3 +591,40 @@ This task involves writing an SQL script that groups records in `second_table` b
 ```sql
 -- Lists the number of records with the same score in second_table
 SELECT score, COUNT(*) AS number FROM second_table GROUP BY score ORDER BY number DESC;
+
+
+
+## Task 16: Say my name
+
+### Description
+This task involves writing an SQL script that lists all records from the `second_table` table in the target database while filtering out any rows where the `name` column does not contain a valid value (i.e., `NULL` or empty strings). The output displays the `score` and `name` columns (in that order) and sorts the results in descending order by `score`. The target database name is passed dynamically as a command-line argument.
+
+### Learning Objectives
+- Learn how to filter out missing or `NULL` data using conditional clauses (`IS NOT NULL`).
+- Combine multiple conditions in a `WHERE` clause using logical operators (`AND`).
+- Master displaying specific columns while ordering results by numeric values.
+
+### Requirements & Constraints
+- **File Name:** `16-no_link.sql`
+- **Target Table:** `second_table`
+- **Output Columns:** `score`, `name` (strictly in this order).
+- **Filter Condition:** Exclude records where `name` is missing or empty (`WHERE name IS NOT NULL AND name != ''`).
+- **Ordering:** Ordered by `score` descending (top first).
+- **SQL Keywords:** Must be in **UPPERCASE** (e.g., `SELECT`, `FROM`, `WHERE`, `IS NOT NULL`, `AND`, `ORDER BY`, `DESC`).
+- **Formatting:** File must start with a descriptive comment and end with a new line.
+
+---
+
+### File Details
+
+| File | Description | Main SQL Command |
+| :--- | :--- | :--- |
+| `16-no_link.sql` | Selects `score` and `name` for rows with valid names, ordered by score descending. | `SELECT score, name FROM second_table WHERE name IS NOT NULL AND name != '' ORDER BY score DESC;` |
+
+---
+
+### Script Content (`16-no_link.sql`)
+
+```sql
+-- Lists all records of second_table having a name value, ordered by score descending
+SELECT score, name FROM second_table WHERE name IS NOT NULL AND name != '' ORDER BY score DESC;
