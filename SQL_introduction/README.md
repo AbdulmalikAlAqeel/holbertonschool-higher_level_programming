@@ -319,3 +319,57 @@ This task involves writing an SQL script that counts and displays the total numb
 ```sql
 -- Displays the number of records with id = 89 in the table first_table
 SELECT COUNT(*) FROM first_table WHERE id = 89;
+
+
+
+## Task 9: Full creation
+
+### Description
+This task involves writing an SQL script that creates a table named `second_table` within the specified database and populates it with multiple initial records. The script ensures safe execution by checking if the table already exists before creating it, avoiding runtime errors. The target database name is passed dynamically as a command-line argument.
+
+### Learning Objectives
+- Practice table schema definition using Data Definition Language (DDL).
+- Learn how to insert multiple records into a table within a single DML statement.
+- Understand table creation with multi-column structures (`INT`, `VARCHAR`).
+
+### Requirements & Constraints
+- **File Name:** `9-full_creation.sql`
+- **Table Name:** `second_table`
+- **Columns:**
+  - `id`: `INT`
+  - `name`: `VARCHAR(256)`
+  - `score`: `INT`
+- **Initial Data:**
+  - `(1, 'John', 10)`
+  - `(2, 'Alex', 3)`
+  - `(3, 'Bob', 14)`
+  - `(4, 'George', 8)`
+- **Forbidden Keywords:** `SELECT`, `SHOW`
+- **SQL Keywords:** Must be in **UPPERCASE** (e.g., `CREATE TABLE IF NOT EXISTS`, `INSERT INTO`, `VALUES`).
+- **Formatting:** File must start with a descriptive comment and end with a new line.
+
+---
+
+### File Details
+
+| File | Description | Main SQL Commands |
+| :--- | :--- | :--- |
+| `9-full_creation.sql` | Creates `second_table` and inserts 4 pre-defined records. | `CREATE TABLE IF NOT EXISTS second_table ...;`<br>`INSERT INTO second_table ... VALUES ...;` |
+
+---
+
+### Script Content (`9-full_creation.sql`)
+
+```sql
+-- Creates second_table in the database hbtn_0c_0 and inserts multiple rows
+CREATE TABLE IF NOT EXISTS second_table (
+    id INT,
+    name VARCHAR(256),
+    score INT
+);
+
+INSERT INTO second_table (id, name, score) VALUES
+(1, 'John', 10),
+(2, 'Alex', 3),
+(3, 'Bob', 14),
+(4, 'George', 8);
