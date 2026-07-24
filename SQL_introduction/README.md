@@ -212,3 +212,38 @@ This task requires writing an SQL script that prints the full creation schema an
 ```sql
 -- Prints the full description of the table first_table from database hbtn_0c_0
 SHOW CREATE TABLE first_table;
+
+
+
+## Task 6: List all in table
+
+### Description
+This task involves writing an SQL script that retrieves and lists all rows and fields from the `first_table` within the specified database. The script queries all existing data entries stored in the table. The target database name is provided dynamically as a command-line argument.
+
+### Learning Objectives
+- Learn how to use Data Manipulation Language (DML) to query data.
+- Master the basic syntax of the `SELECT` statement.
+- Practice selecting all columns using the wildcard (`*`) character.
+
+### Requirements & Constraints
+- **File Name:** `6-list_values.sql`
+- **Target Table:** `first_table`
+- **Fields:** All fields/columns must be printed.
+- **SQL Keywords:** Must be in **UPPERCASE** (e.g., `SELECT * FROM`).
+- **Formatting:** File must start with a descriptive comment and end with a new line.
+
+---
+
+### File Details
+
+| File | Description | Main SQL Command |
+| :--- | :--- | :--- |
+| `6-list_values.sql` | Displays all records from `first_table`. | `SELECT * FROM first_table;` |
+
+---
+
+### Script Content (`6-list_values.sql`)
+
+```sql
+-- Lists all rows of the table first_table from database hbtn_0c_0
+SELECT * FROM first_table;
