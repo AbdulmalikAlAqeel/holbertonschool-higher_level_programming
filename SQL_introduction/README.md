@@ -247,3 +247,40 @@ This task involves writing an SQL script that retrieves and lists all rows and f
 ```sql
 -- Lists all rows of the table first_table from database hbtn_0c_0
 SELECT * FROM first_table;
+
+
+
+## Task 7: First add
+
+### Description
+This task involves writing an SQL script that inserts a new record (row) into the `first_table` table within the target database. The target database name is supplied dynamically as a command-line argument.
+
+### Learning Objectives
+- Learn how to use Data Manipulation Language (DML) to insert new records into existing tables.
+- Master the syntax of the `INSERT INTO` statement.
+- Understand how values are mapped to specific column names.
+
+### Requirements & Constraints
+- **File Name:** `7-insert_value.sql`
+- **Target Table:** `first_table`
+- **Inserted Values:**
+  - `id`: `89`
+  - `name`: `'Best School'`
+- **SQL Keywords:** Must be in **UPPERCASE** (e.g., `INSERT INTO`, `VALUES`).
+- **Formatting:** File must start with a descriptive comment and end with a new line.
+
+---
+
+### File Details
+
+| File | Description | Main SQL Command |
+| :--- | :--- | :--- |
+| `7-insert_value.sql` | Inserts a single record with `id = 89` and `name = 'Best School'`. | `INSERT INTO first_table (id, name) VALUES (89, 'Best School');` |
+
+---
+
+### Script Content (`7-insert_value.sql`)
+
+```sql
+-- Inserts a new row in the table first_table in MySQL server
+INSERT INTO first_table (id, name) VALUES (89, 'Best School');
