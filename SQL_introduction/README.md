@@ -518,3 +518,38 @@ This task involves writing an SQL script that removes all records from the `seco
 ```sql
 -- Removes all records with a score <= 5 in the table second_table
 DELETE FROM second_table WHERE score <= 5;
+
+
+
+## Task 14: Average
+
+### Description
+This task involves writing an SQL script that computes the average score of all records in the `second_table` table. The result is returned with the column label aliased specifically as `average`. The target database name is passed dynamically as a command-line argument.
+
+### Learning Objectives
+- Learn how to calculate arithmetic means using SQL aggregate functions (`AVG`).
+- Understand how to assign aliases to output column labels using the `AS` keyword.
+- Practice basic data analysis and aggregation on tabular data.
+
+### Requirements & Constraints
+- **File Name:** `14-average.sql`
+- **Target Table:** `second_table`
+- **Result Column Alias:** `average`
+- **SQL Keywords:** Must be in **UPPERCASE** (e.g., `SELECT`, `AVG`, `AS`, `FROM`).
+- **Formatting:** File must start with a descriptive comment and end with a new line.
+
+---
+
+### File Details
+
+| File | Description | Main SQL Command |
+| :--- | :--- | :--- |
+| `14-average.sql` | Calculates average score from `second_table` and aliases the column as `average`. | `SELECT AVG(score) AS average FROM second_table;` |
+
+---
+
+### Script Content (`14-average.sql`)
+
+```sql
+-- Computes the score average of all records in second_table
+SELECT AVG(score) AS average FROM second_table;
