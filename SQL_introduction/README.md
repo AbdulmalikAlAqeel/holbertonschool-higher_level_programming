@@ -373,3 +373,39 @@ INSERT INTO second_table (id, name, score) VALUES
 (2, 'Alex', 3),
 (3, 'Bob', 14),
 (4, 'George', 8);
+
+
+
+## Task 10: List by best
+
+### Description
+This task involves writing an SQL script that lists all records from the `second_table` table in the target database. The output displays the columns `score` and `name` (in that specific order) and sorts the results in descending order based on `score` so that the top scores appear first. The target database name is passed dynamically as a command-line argument.
+
+### Learning Objectives
+- Learn how to select specific columns in a designated order using `SELECT`.
+- Master sorting query results using the `ORDER BY` clause.
+- Understand descending ordering using the `DESC` keyword.
+
+### Requirements & Constraints
+- **File Name:** `10-top_score.sql`
+- **Target Table:** `second_table`
+- **Output Columns:** `score`, `name` (strictly in this order).
+- **Ordering:** Ordered by `score` descending (top first).
+- **SQL Keywords:** Must be in **UPPERCASE** (e.g., `SELECT`, `FROM`, `ORDER BY`, `DESC`).
+- **Formatting:** File must start with a descriptive comment and end with a new line.
+
+---
+
+### File Details
+
+| File | Description | Main SQL Command |
+| :--- | :--- | :--- |
+| `10-top_score.sql` | Selects `score` and `name` from `second_table`, ordered by `score` from highest to lowest. | `SELECT score, name FROM second_table ORDER BY score DESC;` |
+
+---
+
+### Script Content (`10-top_score.sql`)
+
+```sql
+-- Lists all records of second_table ordered by score (top first)
+SELECT score, name FROM second_table ORDER BY score DESC;
