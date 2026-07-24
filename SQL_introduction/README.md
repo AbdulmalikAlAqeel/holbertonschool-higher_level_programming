@@ -284,3 +284,38 @@ This task involves writing an SQL script that inserts a new record (row) into th
 ```sql
 -- Inserts a new row in the table first_table in MySQL server
 INSERT INTO first_table (id, name) VALUES (89, 'Best School');
+
+
+
+## Task 8: Count 89
+
+### Description
+This task involves writing an SQL script that counts and displays the total number of records in `first_table` where the column `id` equals `89`. The target database name is supplied dynamically as a command-line argument.
+
+### Learning Objectives
+- Learn how to use SQL Aggregate Functions (`COUNT`).
+- Practice filtering datasets using conditional clauses (`WHERE`).
+- Understand how to query specific metric counts from database tables.
+
+### Requirements & Constraints
+- **File Name:** `8-count_89.sql`
+- **Target Table:** `first_table`
+- **Filter Condition:** `id = 89`
+- **SQL Keywords:** Must be in **UPPERCASE** (e.g., `SELECT`, `COUNT`, `FROM`, `WHERE`).
+- **Formatting:** File must start with a descriptive comment and end with a new line.
+
+---
+
+### File Details
+
+| File | Description | Main SQL Command |
+| :--- | :--- | :--- |
+| `8-count_89.sql` | Displays the number of rows where `id = 89`. | `SELECT COUNT(*) FROM first_table WHERE id = 89;` |
+
+---
+
+### Script Content (`8-count_89.sql`)
+
+```sql
+-- Displays the number of records with id = 89 in the table first_table
+SELECT COUNT(*) FROM first_table WHERE id = 89;
