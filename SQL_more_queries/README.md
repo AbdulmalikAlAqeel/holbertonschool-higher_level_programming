@@ -71,3 +71,18 @@ CREATE TABLE IF NOT EXISTS unique_id (
     id INT DEFAULT 1 UNIQUE,
     name VARCHAR(256)
 );
+
+
+### 6. States table
+* **File:** `6-states.sql`
+* **Description:** Write a SQL script that creates the database `hbtn_0d_usa` and the table `states` with columns `id` (INT AUTO_INCREMENT PRIMARY KEY) and `name` (VARCHAR(256) NOT NULL). Safe against existing items.
+
+#### SQL Script Content:
+```sql
+-- Creates the database hbtn_0d_usa and the table states on MySQL server
+CREATE DATABASE IF NOT EXISTS hbtn_0d_usa;
+USE hbtn_0d_usa;
+CREATE TABLE IF NOT EXISTS states (
+    id INT UNIQUE AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    name VARCHAR(256) NOT NULL
+);
