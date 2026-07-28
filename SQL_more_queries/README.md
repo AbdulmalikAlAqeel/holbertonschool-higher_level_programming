@@ -32,3 +32,16 @@ GRANT ALL PRIVILEGES ON *.* TO 'user_0d_1'@'localhost';
 CREATE DATABASE IF NOT EXISTS hbtn_0d_2;
 CREATE USER IF NOT EXISTS 'user_0d_2'@'localhost' IDENTIFIED BY 'user_0d_2_pwd';
 GRANT SELECT ON hbtn_0d_2.* TO 'user_0d_2'@'localhost';
+
+
+### 3. Always a name
+* **File:** `3-force_name.sql`
+* **Description:** Write a SQL script that creates the table `force_name` on your MySQL server. Table description: `id` (INT), `name` (VARCHAR(256) NOT NULL). The database name will be passed as an argument. Safe against existing tables.
+
+#### SQL Script Content:
+```sql
+-- Creates the table force_name on MySQL server
+CREATE TABLE IF NOT EXISTS force_name (
+    id INT,
+    name VARCHAR(256) NOT NULL
+);
