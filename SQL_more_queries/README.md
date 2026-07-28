@@ -58,3 +58,16 @@ CREATE TABLE IF NOT EXISTS id_not_null (
     id INT DEFAULT 1,
     name VARCHAR(256)
 );
+
+
+### 5. Unique ID
+* **File:** `5-unique_id.sql`
+* **Description:** Write a SQL script that creates the table `unique_id` on your MySQL server with columns `id` (INT DEFAULT 1 UNIQUE) and `name` (VARCHAR(256)). The database name will be passed as an argument. Safe against existing tables.
+
+#### SQL Script Content:
+```sql
+-- Creates the table unique_id on MySQL server
+CREATE TABLE IF NOT EXISTS unique_id (
+    id INT DEFAULT 1 UNIQUE,
+    name VARCHAR(256)
+);
