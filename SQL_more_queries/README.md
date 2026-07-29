@@ -86,3 +86,20 @@ CREATE TABLE IF NOT EXISTS states (
     id INT UNIQUE AUTO_INCREMENT NOT NULL PRIMARY KEY,
     name VARCHAR(256) NOT NULL
 );
+
+
+### 7. Cities table
+* **File:** `7-cities.sql`
+* **Description:** Write a SQL script that creates the database `hbtn_0d_usa` and the table `cities` with columns `id` (INT AUTO_INCREMENT PRIMARY KEY), `state_id` (INT NOT NULL, FOREIGN KEY referencing `states(id)`), and `name` (VARCHAR(256) NOT NULL). Safe against existing items.
+
+#### SQL Script Content:
+```sql
+-- Creates the database hbtn_0d_usa and the table cities on MySQL server
+CREATE DATABASE IF NOT EXISTS hbtn_0d_usa;
+USE hbtn_0d_usa;
+CREATE TABLE IF NOT EXISTS cities (
+    id INT UNIQUE AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    state_id INT NOT NULL,
+    name VARCHAR(256) NOT NULL,
+    FOREIGN KEY (state_id) REFERENCES states(id)
+);
