@@ -168,3 +168,20 @@ FROM tv_shows
 LEFT JOIN tv_show_genres ON tv_shows.id = tv_show_genres.show_id
 WHERE tv_show_genres.genre_id IS NULL
 ORDER BY tv_shows.title ASC, tv_show_genres.genre_id ASC;
+
+
+### 13. Number of shows by genre
+* **File:** `13-count_shows_by_genre.sql`
+* **Directory:** `SQL_more_queries`
+* **Description:** A script that lists all genres from the `hbtn_0d_tvshows` database and displays the number of shows linked to each.
+* **Requirements:**
+  * Display format: `<TV Show genre>` - `<Number of shows linked to this genre>`
+  * First column must be named `genre`
+  * Second column must be named `number_of_shows`
+  * Exclude genres that have no shows linked to them
+  * Sort results in descending order by the number of shows linked
+  * Uses only one `SELECT` statement
+
+#### Usage:
+```bash
+cat 13-count_shows_by_genre.sql | mysql -hlocalhost -uroot -p hbtn_0d_tvshows
