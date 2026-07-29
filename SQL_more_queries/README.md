@@ -103,3 +103,15 @@ CREATE TABLE IF NOT EXISTS cities (
     name VARCHAR(256) NOT NULL,
     FOREIGN KEY (state_id) REFERENCES states(id)
 );
+
+
+### 8. Cities of California
+* **File:** `8-cities_of_california_subquery.sql`
+* **Description:** Write a SQL script that lists all the cities of California found in `hbtn_0d_usa` without using the `JOIN` keyword (using subqueries instead). Results are sorted in ascending order by `cities.id`.
+
+#### SQL Script Content:
+```sql
+-- Lists all the cities of California found in the database hbtn_0d_usa using a subquery
+SELECT id, name FROM cities
+WHERE state_id = (SELECT id FROM states WHERE name = 'California')
+ORDER BY id ASC;
