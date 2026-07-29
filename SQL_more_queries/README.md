@@ -201,3 +201,19 @@ JOIN tv_show_genres ON tv_genres.id = tv_show_genres.genre_id
 JOIN tv_shows ON tv_shows.id = tv_show_genres.show_id
 WHERE tv_shows.title = 'Dexter'
 ORDER BY tv_genres.name ASC;
+
+
+### 15. Only Comedy
+* **File:** `15-comedy_only.sql`
+* **Directory:** `SQL_more_queries`
+* **Description:** Write a SQL script that lists all Comedy shows in the database `hbtn_0d_tvshows` using a single `SELECT` statement with `JOIN` operations across three tables (`tv_shows`, `tv_show_genres`, and `tv_genres`). Displays `tv_shows.title` sorted in ascending order by show title.
+
+#### SQL Script Content:
+```sql
+-- Lists all Comedy shows in the database hbtn_0d_tvshows
+SELECT tv_shows.title
+FROM tv_shows
+JOIN tv_show_genres ON tv_shows.id = tv_show_genres.show_id
+JOIN tv_genres ON tv_genres.id = tv_show_genres.genre_id
+WHERE tv_genres.name = 'Comedy'
+ORDER BY tv_shows.title ASC;
