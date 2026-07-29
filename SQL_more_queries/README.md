@@ -128,3 +128,16 @@ SELECT cities.id, cities.name, states.name
 FROM cities
 JOIN states ON cities.state_id = states.id
 ORDER BY cities.id ASC;
+
+
+### 10. Genre ID by show
+* **File:** `10-genre_id_by_show.sql`
+* **Description:** Write a SQL script that lists all shows contained in `hbtn_0d_tvshows` that have at least one genre linked. Displaying `tv_shows.title` and `tv_show_genres.genre_id`, sorted in ascending order by `tv_shows.title` and `tv_show_genres.genre_id` using a single `SELECT` statement.
+
+#### SQL Script Content:
+```sql
+-- Lists all shows contained in hbtn_0d_tvshows that have at least one genre linked
+SELECT tv_shows.title, tv_show_genres.genre_id
+FROM tv_shows
+JOIN tv_show_genres ON tv_shows.id = tv_show_genres.show_id
+ORDER BY tv_shows.title ASC, tv_show_genres.genre_id ASC;
