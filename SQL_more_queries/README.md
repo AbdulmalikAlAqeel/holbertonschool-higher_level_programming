@@ -115,3 +115,16 @@ CREATE TABLE IF NOT EXISTS cities (
 SELECT id, name FROM cities
 WHERE state_id = (SELECT id FROM states WHERE name = 'California')
 ORDER BY id ASC;
+
+
+### 9. Cities by States
+* **File:** `9-cities_by_state_join.sql`
+* **Description:** Write a SQL script that lists all cities contained in `hbtn_0d_usa` with their corresponding state names using a single `SELECT` statement with `JOIN`. Each record displays `cities.id`, `cities.name`, and `states.name`, sorted in ascending order by `cities.id`.
+
+#### SQL Script Content:
+```sql
+-- Lists all cities in hbtn_0d_usa with their state names using JOIN
+SELECT cities.id, cities.name, states.name
+FROM cities
+JOIN states ON cities.state_id = states.id
+ORDER BY cities.id ASC;
