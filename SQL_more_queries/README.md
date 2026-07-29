@@ -217,3 +217,18 @@ JOIN tv_show_genres ON tv_shows.id = tv_show_genres.show_id
 JOIN tv_genres ON tv_genres.id = tv_show_genres.genre_id
 WHERE tv_genres.name = 'Comedy'
 ORDER BY tv_shows.title ASC;
+
+
+### 16. List shows and genres
+* **File:** `16-shows_by_genre.sql`
+* **Directory:** `SQL_more_queries`
+* **Description:** Write a SQL script that lists all shows, and all genres linked to that show, from the database `hbtn_0d_tvshows`. If a show doesn't have a genre, displays `NULL` in the genre column. Uses a single `SELECT` statement with multiple `LEFT JOIN` operations across three tables (`tv_shows`, `tv_show_genres`, and `tv_genres`). Results display `tv_shows.title` and `tv_genres.name`, sorted in ascending order by show title and genre name.
+
+#### SQL Script Content:
+```sql
+-- Lists all shows, and all genres linked to that show, from the database hbtn_0d_tvshows
+SELECT tv_shows.title, tv_genres.name
+FROM tv_shows
+LEFT JOIN tv_show_genres ON tv_shows.id = tv_show_genres.show_id
+LEFT JOIN tv_genres ON tv_show_genres.genre_id = tv_genres.id
+ORDER BY tv_shows.title ASC, tv_genres.name ASC;
