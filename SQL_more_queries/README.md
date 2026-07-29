@@ -141,3 +141,16 @@ SELECT tv_shows.title, tv_show_genres.genre_id
 FROM tv_shows
 JOIN tv_show_genres ON tv_shows.id = tv_show_genres.show_id
 ORDER BY tv_shows.title ASC, tv_show_genres.genre_id ASC;
+
+
+### 11. Genre ID for all shows
+* **File:** `11-genre_id_all_shows.sql`
+* **Description:** Write a SQL script that lists all shows contained in the database `hbtn_0d_tvshows`. Displaying `tv_shows.title` and `tv_show_genres.genre_id`. If a show doesn't have a genre, displays `NULL`. Sorted in ascending order by `tv_shows.title` and `tv_show_genres.genre_id` using a single `SELECT` statement with `LEFT JOIN`.
+
+#### SQL Script Content:
+```sql
+-- Lists all shows contained in the database hbtn_0d_tvshows including those without a genre
+SELECT tv_shows.title, tv_show_genres.genre_id
+FROM tv_shows
+LEFT JOIN tv_show_genres ON tv_shows.id = tv_show_genres.show_id
+ORDER BY tv_shows.title ASC, tv_show_genres.genre_id ASC;
