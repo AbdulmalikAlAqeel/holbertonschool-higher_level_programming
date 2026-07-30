@@ -205,3 +205,16 @@ session.add(new_state)
 session.commit()
 
 print(new_state.id)
+
+
+### 12. Update a state
+* **File:** `12-model_state_update_id_2.py`
+* **Directory:** `python-object_relational_mapping`
+* **Description:** Write a Python script that changes the name of the `State` object where `id = 2` to "New Mexico" in the database `hbtn_0e_6_usa` using SQLAlchemy ORM.
+
+#### SQLAlchemy Query / Logic:
+```python
+state = session.query(State).filter(State.id == 2).first()
+if state:
+    state.name = "New Mexico"
+    session.commit()
