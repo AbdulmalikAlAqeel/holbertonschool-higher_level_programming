@@ -146,3 +146,18 @@ for state in states:
     print("{}: {}".format(state.id, state.name))
 
 session.close()
+
+
+### 8. First state
+* **File:** `8-model_state_fetch_first.py`
+* **Directory:** `python-object_relational_mapping`
+* **Description:** Write a Python script that prints the first `State` object from the database `hbtn_0e_6_usa` ordered by `states.id` using SQLAlchemy ORM. Uses `.first()` to query only the first record directly. Displays `Nothing` if the table is empty.
+
+#### SQLAlchemy Query / Logic:
+```python
+first_state = session.query(State).order_by(State.id).first()
+
+if first_state is None:
+    print("Nothing")
+else:
+    print("{}: {}".format(first_state.id, first_state.name))
