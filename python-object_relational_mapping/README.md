@@ -88,3 +88,21 @@ cursor.execute(
     "JOIN states ON cities.state_id = states.id "
     "ORDER BY cities.id ASC"
 )
+
+
+### 5. All cities by state
+* **File:** `5-filter_cities.py`
+* **Directory:** `python-object_relational_mapping`
+* **Description:** Write a Python script that takes in the name of a state as an argument and lists all cities of that state from the database `hbtn_0e_4_usa`. Safe from SQL injection using parameterized queries (`%s`). Displays results formatted as comma-separated values on a single line (`City1, City2, ...`).
+
+#### SQL Query / Logic:
+```python
+cursor.execute(
+    "SELECT cities.name "
+    "FROM cities "
+    "JOIN states ON cities.state_id = states.id "
+    "WHERE states.name = %s "
+    "ORDER BY cities.id ASC",
+    (sys.argv[4],)
+)
+print(", ".join([row[0] for row in rows]))
