@@ -191,3 +191,17 @@ if state is None:
     print("Not found")
 else:
     print("{}".format(state.id))
+
+
+### 11. Add a new state
+* **File:** `11-model_state_insert.py`
+* **Directory:** `python-object_relational_mapping`
+* **Description:** Write a Python script that adds the `State` object "Louisiana" to the database `hbtn_0e_6_usa` using SQLAlchemy ORM. Prints the new `states.id` after creation.
+
+#### SQLAlchemy Query / Logic:
+```python
+new_state = State(name="Louisiana")
+session.add(new_state)
+session.commit()
+
+print(new_state.id)
