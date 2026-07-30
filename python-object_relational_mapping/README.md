@@ -231,3 +231,19 @@ states = session.query(State).filter(State.name.like('%a%')).all()
 for state in states:
     session.delete(state)
 session.commit()
+
+
+### 14. Cities in state
+* **Files:** `model_city.py`, `14-model_city_fetch_by_state.py`
+* **Directory:** `python-object_relational_mapping`
+* **Description:** 
+  1. `model_city.py`: Contains the `City` class definition inheriting from `Base` (imported from `model_state`), mapping to the MySQL table `cities` with attributes `id`, `name`, and `state_id` (foreign key to `states.id`).
+  2. `14-model_city_fetch_by_state.py`: Writes a Python script that prints all `City` objects from database `hbtn_0e_14_usa` using SQLAlchemy ORM. Results are joined with `State` and sorted ascending by `cities.id`.
+
+#### Class Model (`model_city.py`):
+```python
+class City(Base):
+    __tablename__ = 'cities'
+    id = Column(Integer, primary_key=True, nullable=False, autoincrement=True)
+    name = Column(String(128), nullable=False)
+    state_id = Column(Integer, ForeignKey('states.id'), nullable=False)
