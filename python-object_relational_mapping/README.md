@@ -39,3 +39,13 @@ if __name__ == "__main__":
 
     cursor.close()
     db.close()
+
+
+### 1. Filter states
+* **File:** `1-filter_states.py`
+* **Directory:** `python-object_relational_mapping`
+* **Description:** Write a Python script that lists all `states` with a name starting with an uppercase `N` from the database `hbtn_0e_0_usa`. Uses `MySQLdb` and `LIKE BINARY 'N%'` to enforce case sensitivity. Results are sorted in ascending order by `states.id`.
+
+#### SQL Query / Logic:
+```python
+cursor.execute("SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY id ASC")
