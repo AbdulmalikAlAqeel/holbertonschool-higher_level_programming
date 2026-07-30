@@ -49,3 +49,14 @@ if __name__ == "__main__":
 #### SQL Query / Logic:
 ```python
 cursor.execute("SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY id ASC")
+
+
+### 2. Filter states by user input
+* **File:** `2-my_filter_states.py`
+* **Directory:** `python-object_relational_mapping`
+* **Description:** Write a Python script that takes in an argument and displays all values in the `states` table of `hbtn_0e_0_usa` where `name` matches the user input argument. Uses `format()` to build the SQL query and `LIKE BINARY` for exact case matching. Results are sorted in ascending order by `states.id`.
+
+#### SQL Query / Logic:
+```python
+query = "SELECT * FROM states WHERE name LIKE BINARY '{}' ORDER BY id ASC".format(state_searched)
+cursor.execute(query)
