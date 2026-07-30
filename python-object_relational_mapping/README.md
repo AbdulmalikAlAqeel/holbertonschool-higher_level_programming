@@ -73,3 +73,18 @@ cursor.execute(
     "SELECT * FROM states WHERE name = %s ORDER BY id ASC",
     (sys.argv[4],)
 )
+
+
+### 4. Cities by states
+* **File:** `4-cities_by_state.py`
+* **Directory:** `python-object_relational_mapping`
+* **Description:** Write a Python script that lists all `cities` from the database `hbtn_0e_4_usa` along with their corresponding `state` name using a single SQL `JOIN` query. Results are sorted in ascending order by `cities.id`.
+
+#### SQL Query / Logic:
+```python
+cursor.execute(
+    "SELECT cities.id, cities.name, states.name "
+    "FROM cities "
+    "JOIN states ON cities.state_id = states.id "
+    "ORDER BY cities.id ASC"
+)
