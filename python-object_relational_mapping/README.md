@@ -176,3 +176,18 @@ states = session.query(State).filter(
 
 for state in states:
     print("{}: {}".format(state.id, state.name))
+
+
+### 10. Get a state
+* **File:** `10-model_state_my_get.py`
+* **Directory:** `python-object_relational_mapping`
+* **Description:** Write a Python script that prints the `State` object ID with the name passed as an argument from the database `hbtn_0e_6_usa` using SQLAlchemy ORM. Fully protected against SQL injection. Displays `Not found` if no state matches the searched name.
+
+#### SQLAlchemy Query / Logic:
+```python
+state = session.query(State).filter(State.name == state_name).first()
+
+if state is None:
+    print("Not found")
+else:
+    print("{}".format(state.id))
