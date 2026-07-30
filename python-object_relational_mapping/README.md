@@ -60,3 +60,16 @@ cursor.execute("SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY id ASC
 ```python
 query = "SELECT * FROM states WHERE name LIKE BINARY '{}' ORDER BY id ASC".format(state_searched)
 cursor.execute(query)
+
+
+### 3. SQL Injection...
+* **File:** `3-my_safe_filter_states.py`
+* **Directory:** `python-object_relational_mapping`
+* **Description:** Write a Python script that takes in an argument and displays all values in the `states` table of `hbtn_0e_0_usa` where `name` matches the user input argument. Unlike task 2, this script is fully protected against MySQL Injection attacks by using parameterized queries (`%s`). Results are sorted in ascending order by `states.id`.
+
+#### SQL Query / Logic (Safe from Injection):
+```python
+cursor.execute(
+    "SELECT * FROM states WHERE name = %s ORDER BY id ASC",
+    (sys.argv[4],)
+)
