@@ -106,3 +106,26 @@ cursor.execute(
     (sys.argv[4],)
 )
 print(", ".join([row[0] for row in rows]))
+
+
+### 6. First state model
+* **File:** `model_state.py`
+* **Directory:** `python-object_relational_mapping`
+* **Description:** Write a Python file that contains the class definition of a `State` and an instance `Base = declarative_base()`. Maps to the MySQL table `states` using SQLAlchemy ORM with attributes `id` (Auto-increment, Primary Key) and `name` (String max 128 chars, Not Null).
+
+#### Class Definition / ORM Structure:
+```python
+from sqlalchemy import Column, Integer, String
+from sqlalchemy.ext.declarative import declarative_base
+
+Base = declarative_base()
+
+
+class State(Base):
+    """
+    State class inherits from Base and maps to MySQL table 'states'.
+    """
+    __tablename__ = 'states'
+
+    id = Column(Integer, primary_key=True, nullable=False, autoincrement=True)
+    name = Column(String(128), nullable=False)
