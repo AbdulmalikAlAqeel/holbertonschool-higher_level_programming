@@ -161,3 +161,18 @@ if first_state is None:
     print("Nothing")
 else:
     print("{}: {}".format(first_state.id, first_state.name))
+
+
+### 9. Contains `a`
+* **File:** `9-model_state_filter_a.py`
+* **Directory:** `python-object_relational_mapping`
+* **Description:** Write a Python script that lists all `State` objects that contain the letter `a` from the database `hbtn_0e_6_usa` using SQLAlchemy ORM. Results are sorted in ascending order by `states.id`.
+
+#### SQLAlchemy Query / Logic:
+```python
+states = session.query(State).filter(
+    State.name.like('%a%')
+).order_by(State.id).all()
+
+for state in states:
+    print("{}: {}".format(state.id, state.name))
