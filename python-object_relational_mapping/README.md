@@ -129,3 +129,20 @@ class State(Base):
 
     id = Column(Integer, primary_key=True, nullable=False, autoincrement=True)
     name = Column(String(128), nullable=False)
+
+
+### 7. All states via SQLAlchemy
+* **File:** `7-model_state_fetch_all.py`
+* **Directory:** `python-object_relational_mapping`
+* **Description:** Write a Python script that lists all `State` objects from the database `hbtn_0e_6_usa` using SQLAlchemy ORM Sessions. Results are sorted in ascending order by `states.id` and formatted as `id: name`.
+
+#### SQLAlchemy Query / Logic:
+```python
+Session = sessionmaker(bind=engine)
+session = Session()
+
+states = session.query(State).order_by(State.id).all()
+for state in states:
+    print("{}: {}".format(state.id, state.name))
+
+session.close()
