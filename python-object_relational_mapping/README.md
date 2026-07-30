@@ -218,3 +218,16 @@ state = session.query(State).filter(State.id == 2).first()
 if state:
     state.name = "New Mexico"
     session.commit()
+
+
+### 13. Delete states
+* **File:** `13-model_state_delete_a.py`
+* **Directory:** `python-object_relational_mapping`
+* **Description:** Write a Python script that deletes all `State` objects with a name containing the letter `a` from the database `hbtn_0e_6_usa` using SQLAlchemy ORM.
+
+#### SQLAlchemy Query / Logic:
+```python
+states = session.query(State).filter(State.name.like('%a%')).all()
+for state in states:
+    session.delete(state)
+session.commit()
