@@ -1,0 +1,52 @@
+# JavaScript - Warm up
+
+## 📋 Description
+This repository introduces core **JavaScript** fundamentals executed on the backend using **Node.js (v14.x)**. The project covers foundational concepts such as variable declarations (`const`, `let`), primitive and reference data types, conditional branching, loops, functions, objects, and modular scripting, while maintaining compliance with the **semistandard** code formatting rules.
+
+---
+
+## 🛠️ Requirements & Environment
+- **Operating System:** Ubuntu 20.04 LTS
+- **Runtime Environment:** Node.js v14.x
+- **Style Guide / Linter:** `semistandard` (Standard JS rules with mandatory semicolons)
+- **Allowed Editors:** `vi`, `vim`, `emacs`
+- **Shebang Header:** `#!/usr/bin/node` (first line of every script)
+- **File Permissions:** All script files must be executable (`chmod +x`)
+- **Formatting:** Files must end with a single new line
+
+---
+
+## 💻 Environment Setup
+
+### 1. Install Node.js 14 & NPM
+```bash
+curl -sL [https://deb.nodesource.com/setup_14.x](https://deb.nodesource.com/setup_14.x) | sudo -E bash -
+sudo apt-get install -y nodejs
+```
+
+2. Install Semistandard Linter
+
+```bash
+sudo npm install semistandard --global
+```
+
+## 📂 Project Tasks
+
+| Task | File | Description |
+| :--- | :--- | :--- |
+| **0. First constant, first print** | `0-javascript_is_amazing.js` | Script that prints `"JavaScript is amazing"` using a `const` variable `myVar` and `console.log()`. |
+
+## 🚀 Usage & Testing
+To run the script and verify code style compliance:
+
+```Bash
+# Grant executable permissions
+chmod +x 0-javascript_is_amazing.js
+
+# Execute the script
+./0-javascript_is_amazing.js
+# Output: JavaScript is amazing
+
+# Validate code compliance with semistandard
+semistandard ./0-javascript_is_amazing.js
+```
