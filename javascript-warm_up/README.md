@@ -29,12 +29,12 @@ sudo apt-get install -y nodejs
 ```bash
 sudo npm install semistandard --global
 ```
-
 ## 📂 Project Tasks
 
 | Task | File | Description |
 | :--- | :--- | :--- |
 | **0. First constant, first print** | `0-javascript_is_amazing.js` | Script that prints `"JavaScript is amazing"` using a `const` variable `myVar` and `console.log()`. |
+| **1. 3 languages** | `1-multi_languages.js` | Script that prints 3 specific lines (`C is fun`, `Python is cool`, `JavaScript is amazing`) using `console.log()` without `var`. |
 
 ## 🚀 Usage & Testing
 To run the script and verify code style compliance:
@@ -49,4 +49,19 @@ chmod +x 0-javascript_is_amazing.js
 
 # Validate code compliance with semistandard
 semistandard ./0-javascript_is_amazing.js
+```
+
+```Bash
+# Grant executable permissions
+chmod +x 1-multi_languages.js
+
+# Execute the script
+./1-multi_languages.js
+# Output:
+# C is fun
+# Python is cool
+# JavaScript is amazing
+
+# Validate code compliance with semistandard
+semistandard ./1-multi_languages.js
 ```
