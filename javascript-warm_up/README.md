@@ -45,6 +45,7 @@ sudo npm install semistandard --global
 | **9. Add** | `9-add.js` | Script that prints the addition of 2 integers using a defined function `add(a, b)`, without using `var`. |
 | **10. Factorial** | `10-factorial.js` | Script that computes and prints a factorial recursively using a function, returning `1` for `NaN`, without using `var`. |
 | **11. Second biggest!** | `11-second_biggest.js` | Searches for the second biggest integer in the list of arguments. |
+| **12. Object** | `12-object.js` | Updates the value of a property inside a constant object. |
 
 ## 🚀 Usage & Testing
 
@@ -202,4 +203,16 @@ chmod +x 11-second_biggest.js
 
 # Validate code compliance with semistandard
 semistandard ./11-second_biggest.js
+```
+
+```Bash
+# Example: Running the 12th task
+chmod +x 12-object.js
+./12-object.js
+# Output:
+# { type: 'object', value: 12 }
+# { type: 'object', value: 89 }
+
+# Validate code compliance with semistandard
+semistandard ./12-object.js
 ```
