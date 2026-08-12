@@ -43,6 +43,7 @@ sudo npm install semistandard --global
 | **7. I love C** | `7-multi_c.js` | Script that prints `"C is fun"` x times based on the first argument, or prints `"Missing number of occurrences"` if the argument is missing or invalid. |
 | **8. Square** | `8-square.js` | Script that prints a square of size `x` using the character `X`, or prints `"Missing size"` if the argument is missing or invalid. |
 | **9. Add** | `9-add.js` | Script that prints the addition of 2 integers using a defined function `add(a, b)`, without using `var`. |
+| **10. Factorial** | `10-factorial.js` | Script that computes and prints a factorial recursively using a function, returning `1` for `NaN`, without using `var`. |
 
 ## 🚀 Usage & Testing
 
@@ -178,4 +179,16 @@ chmod +x 9-add.js
 
 # Validate code compliance with semistandard
 semistandard ./9-add.js
+```
+
+```Bash
+# Grant executable permissions
+chmod +x 10-factorial.js
+
+# Execute the script with a number
+./10-factorial.js 5
+# Output: 120
+
+# Validate code compliance with semistandard
+semistandard ./10-factorial.js
 ```
