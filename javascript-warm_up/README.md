@@ -44,6 +44,7 @@ sudo npm install semistandard --global
 | **8. Square** | `8-square.js` | Script that prints a square of size `x` using the character `X`, or prints `"Missing size"` if the argument is missing or invalid. |
 | **9. Add** | `9-add.js` | Script that prints the addition of 2 integers using a defined function `add(a, b)`, without using `var`. |
 | **10. Factorial** | `10-factorial.js` | Script that computes and prints a factorial recursively using a function, returning `1` for `NaN`, without using `var`. |
+| **11. Second biggest!** | `11-second_biggest.js` | Searches for the second biggest integer in the list of arguments. |
 
 ## 🚀 Usage & Testing
 
@@ -191,4 +192,14 @@ chmod +x 10-factorial.js
 
 # Validate code compliance with semistandard
 semistandard ./10-factorial.js
+```
+
+```Bash
+# Example: Running the 11th task
+chmod +x 11-second_biggest.js
+./11-second_biggest.js 4 2 5 3 0 -34
+# Output: 4
+
+# Validate code compliance with semistandard
+semistandard ./11-second_biggest.js
 ```
