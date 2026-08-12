@@ -40,6 +40,7 @@ sudo npm install semistandard --global
 | **4. Create a sentence** | `4-concat.js` | Script that prints two passed command-line arguments in the format `"<arg1> is <arg2>"` using `console.log()` and template literals. |
 | **5. An Integer** | `5-to_integer.js` | Script that prints `"My number: <integer>"` if the first argument can be converted to an integer; otherwise, prints `"Not a number"`. |
 | **6. Loop to languages** | `6-multi_languages_loop.js` | Script that prints 3 lines using an array of strings and a loop, without using `if/else` statements, with only one `console.log`, and without `var`. |
+| **7. I love C** | `7-multi_c.js` | Script that prints `"C is fun"` x times based on the first argument, or prints `"Missing number of occurrences"` if the argument is missing or invalid. |
 
 ## 🚀 Usage & Testing
 
@@ -133,4 +134,19 @@ chmod +x 6-multi_languages_loop.js
 
 # Validate code compliance with semistandard
 semistandard ./6-multi_languages_loop.js
+```
+
+```Bash
+# Grant executable permissions
+chmod +x 7-multi_c.js
+
+# Execute the script with a number
+./7-multi_c.js 3
+# Output:
+# C is fun
+# C is fun
+# C is fun
+
+# Validate code compliance with semistandard
+semistandard ./7-multi_c.js
 ```
