@@ -38,8 +38,10 @@ sudo npm install semistandard --global
 | **2. Arguments** | `2-arguments.js` | Script that checks command-line arguments using `process.argv` and prints messages depending on whether 0, 1, or multiple arguments are passed. |
 | **3. Value of my argument** | `3-value_argument.js` | Script that prints the first command-line argument passed to it, or prints `"No argument"` if none are provided, without using `length` or `var.`|
 | **4. Create a sentence** | `4-concat.js` | Script that prints two passed command-line arguments in the format `"<arg1> is <arg2>"` using `console.log()` and template literals. |
+| **5. An Integer** | `5-to_integer.js` | Script that prints `"My number: <integer>"` if the first argument can be converted to an integer; otherwise, prints `"Not a number"`. |
 
 ## 🚀 Usage & Testing
+
 To run the script and verify code style compliance:
 
 ```Bash
@@ -103,4 +105,16 @@ chmod +x 4-concat.js
 
 # Validate code compliance with semistandard
 semistandard ./4-concat.js
+```
+
+```Bash
+# Grant executable permissions
+chmod +x 5-to_integer.js
+
+# Execute the script with a number
+./5-to_integer.js 89
+# Output: My number: 89
+
+# Validate code compliance with semistandard
+semistandard ./5-to_integer.js
 ```
