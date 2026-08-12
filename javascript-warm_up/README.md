@@ -36,7 +36,7 @@ sudo npm install semistandard --global
 | **0. First constant, first print** | `0-javascript_is_amazing.js` | Script that prints `"JavaScript is amazing"` using a `const` variable `myVar` and `console.log()`. |
 | **1. 3 languages** | `1-multi_languages.js` | Script that prints 3 specific lines (`C is fun`, `Python is cool`, `JavaScript is amazing`) using `console.log()` without `var`. |
 | **2. Arguments** | `2-arguments.js` | Script that checks command-line arguments using `process.argv` and prints messages depending on whether 0, 1, or multiple arguments are passed. |
-| **3. Value of my argument** | `3-value_argument.js` | Script that prints the first command-line argument passed to it, or prints `"No argument"` if none are provided, without using `length` or `var.`|
+| **3. Value of my argument** | `3-value_argument.js` | Script that prints the first command-line argument passed to it, or prints `"No argument"` if none are provided, without using `length` or `var`. |
 | **4. Create a sentence** | `4-concat.js` | Script that prints two passed command-line arguments in the format `"<arg1> is <arg2>"` using `console.log()` and template literals. |
 | **5. An Integer** | `5-to_integer.js` | Script that prints `"My number: <integer>"` if the first argument can be converted to an integer; otherwise, prints `"Not a number"`. |
 | **6. Loop to languages** | `6-multi_languages_loop.js` | Script that prints 3 lines using an array of strings and a loop, without using `if/else` statements, with only one `console.log`, and without `var`. |
@@ -46,6 +46,7 @@ sudo npm install semistandard --global
 | **10. Factorial** | `10-factorial.js` | Script that computes and prints a factorial recursively using a function, returning `1` for `NaN`, without using `var`. |
 | **11. Second biggest!** | `11-second_biggest.js` | Searches for the second biggest integer in the list of arguments. |
 | **12. Object** | `12-object.js` | Updates the value of a property inside a constant object. |
+| **13. Add file** | `13-add.js` | A module that exports a function for addition. |
 
 ## 🚀 Usage & Testing
 
@@ -215,4 +216,14 @@ chmod +x 12-object.js
 
 # Validate code compliance with semistandard
 semistandard ./12-object.js
+```
+
+```Bash
+# Example: Running the 13th task via main file
+chmod +x 13-main.js
+./13-main.js
+# Output: 8
+
+# Validate code compliance with semistandard
+semistandard ./13-add.js ./13-main.js
 ```
