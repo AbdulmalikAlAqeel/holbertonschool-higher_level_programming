@@ -41,6 +41,7 @@ sudo npm install semistandard --global
 | **5. An Integer** | `5-to_integer.js` | Script that prints `"My number: <integer>"` if the first argument can be converted to an integer; otherwise, prints `"Not a number"`. |
 | **6. Loop to languages** | `6-multi_languages_loop.js` | Script that prints 3 lines using an array of strings and a loop, without using `if/else` statements, with only one `console.log`, and without `var`. |
 | **7. I love C** | `7-multi_c.js` | Script that prints `"C is fun"` x times based on the first argument, or prints `"Missing number of occurrences"` if the argument is missing or invalid. |
+| **8. Square** | `8-square.js` | Script that prints a square of size `x` using the character `X`, or prints `"Missing size"` if the argument is missing or invalid. |
 
 ## 🚀 Usage & Testing
 
@@ -149,4 +150,19 @@ chmod +x 7-multi_c.js
 
 # Validate code compliance with semistandard
 semistandard ./7-multi_c.js
+```
+
+```Bash
+# Grant executable permissions
+chmod +x 8-square.js
+
+# Execute the script with a size
+./8-square.js 3
+# Output:
+# XXX
+# XXX
+# XXX
+
+# Validate code compliance with semistandard
+semistandard ./8-square.js
 ```
