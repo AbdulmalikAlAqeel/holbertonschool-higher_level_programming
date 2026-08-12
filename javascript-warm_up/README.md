@@ -35,7 +35,7 @@ sudo npm install semistandard --global
 | :--- | :--- | :--- |
 | **0. First constant, first print** | `0-javascript_is_amazing.js` | Script that prints `"JavaScript is amazing"` using a `const` variable `myVar` and `console.log()`. |
 | **1. 3 languages** | `1-multi_languages.js` | Script that prints 3 specific lines (`C is fun`, `Python is cool`, `JavaScript is amazing`) using `console.log()` without `var`. |
-
+| **2. Arguments** | `2-arguments.js` | Script that checks command-line arguments using `process.argv` and prints messages depending on whether 0, 1, or multiple arguments are passed. |
 ## 🚀 Usage & Testing
 To run the script and verify code style compliance:
 
@@ -64,4 +64,16 @@ chmod +x 1-multi_languages.js
 
 # Validate code compliance with semistandard
 semistandard ./1-multi_languages.js
+```
+
+```Bash
+# Grant executable permissions
+chmod +x 2-arguments.js
+
+# Execute the script with arguments
+./2-arguments.js Holberton School
+# Output: Arguments found
+
+# Validate code compliance with semistandard
+semistandard ./2-arguments.js
 ```
