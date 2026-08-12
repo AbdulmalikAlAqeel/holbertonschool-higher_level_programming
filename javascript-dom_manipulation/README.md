@@ -19,14 +19,23 @@ This project introduces the fundamentals of **DOM (Document Object Model) Manipu
 | Task | File | Description |
 | :--- | :--- | :--- |
 | **0. Color Me** | `0-script.js` | Updates the text color of the HTML `header` element to red (`#FF0000`) using `document.querySelector`. |
+| **1. Click and turn red** | `1-script.js` | Updates the text color of the HTML `header` element to red (`#FF0000`) when the user clicks on the tag with id `red_header`. |
 
 ---
 
 ## 🚀 Usage & Testing
+
 To test the scripts:
 1. Open the respective HTML file (e.g., `0-main.html`) in **Google Chrome**.
 2. Ensure the JavaScript file (e.g., `0-script.js`) is in the same directory and correctly referenced in the HTML.
 3. Validate code compliance with `semistandard`:
-   ```bash
-   semistandard --fix 0-script.js
-   semistandard 0-script.js
+
+ ```bash
+ semistandard --fix 0-script.js
+ semistandard 0-script.js
+ ```
+
+```bash
+semistandard --fix 1-script.js
+semistandard 1-script.js
+```
