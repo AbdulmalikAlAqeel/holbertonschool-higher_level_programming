@@ -39,6 +39,7 @@ sudo npm install semistandard --global
 | **3. Value of my argument** | `3-value_argument.js` | Script that prints the first command-line argument passed to it, or prints `"No argument"` if none are provided, without using `length` or `var.`|
 | **4. Create a sentence** | `4-concat.js` | Script that prints two passed command-line arguments in the format `"<arg1> is <arg2>"` using `console.log()` and template literals. |
 | **5. An Integer** | `5-to_integer.js` | Script that prints `"My number: <integer>"` if the first argument can be converted to an integer; otherwise, prints `"Not a number"`. |
+| **6. Loop to languages** | `6-multi_languages_loop.js` | Script that prints 3 lines using an array of strings and a loop, without using `if/else` statements, with only one `console.log`, and without `var`. |
 
 ## 🚀 Usage & Testing
 
@@ -117,4 +118,19 @@ chmod +x 5-to_integer.js
 
 # Validate code compliance with semistandard
 semistandard ./5-to_integer.js
+```
+
+```Bash
+# Grant executable permissions
+chmod +x 6-multi_languages_loop.js
+
+# Execute the script
+./6-multi_languages_loop.js
+# Output:
+# C is fun
+# Python is cool
+# JavaScript is amazing
+
+# Validate code compliance with semistandard
+semistandard ./6-multi_languages_loop.js
 ```
