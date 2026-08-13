@@ -21,6 +21,7 @@ This project introduces the fundamentals of **DOM (Document Object Model) Manipu
 | **0. Color Me** | `0-script.js` | Updates the text color of the HTML `header` element to red (`#FF0000`) using `document.querySelector`. |
 | **1. Click and turn red** | `1-script.js` | Updates the text color of the HTML `header` element to red (`#FF0000`) when the user clicks on the tag with id `red_header`. |
 | **2. Add .red class** | `2-script.js` | Adds the class `red` to the `header` element when the user clicks on the tag with id `red_header`. |
+| **3. Toggle classes** | `3-script.js` | Toggles the class of the `header` element between `red` and `green` when the user clicks on the tag with id `toggle_header`. |
 
 ---
 
@@ -31,9 +32,9 @@ To test the scripts:
 2. Ensure the JavaScript file (e.g., `0-script.js`) is in the same directory and correctly referenced in the HTML.
 3. Validate code compliance with `semistandard`:
 
- ```bash
- semistandard --fix 0-script.js
- semistandard 0-script.js
+```bash
+semistandard --fix 0-script.js
+semistandard 0-script.js
  ```
 
 ```bash
@@ -44,4 +45,9 @@ semistandard 1-script.js
 ```bash
 semistandard --fix 2-script.js
 semistandard 2-script.js
+```
+
+```bash
+semistandard --fix 3-script.js
+semistandard 3-script.js
 ```
