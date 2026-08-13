@@ -20,6 +20,7 @@ This project introduces the fundamentals of **DOM (Document Object Model) Manipu
 | :--- | :--- | :--- |
 | **0. Color Me** | `0-script.js` | Updates the text color of the HTML `header` element to red (`#FF0000`) using `document.querySelector`. |
 | **1. Click and turn red** | `1-script.js` | Updates the text color of the HTML `header` element to red (`#FF0000`) when the user clicks on the tag with id `red_header`. |
+| **2. Add .red class** | `2-script.js` | Adds the class `red` to the `header` element when the user clicks on the tag with id `red_header`. |
 
 ---
 
@@ -38,4 +39,9 @@ To test the scripts:
 ```bash
 semistandard --fix 1-script.js
 semistandard 1-script.js
+```
+
+```bash
+semistandard --fix 2-script.js
+semistandard 2-script.js
 ```
