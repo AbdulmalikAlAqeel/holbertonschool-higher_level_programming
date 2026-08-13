@@ -10,6 +10,7 @@ This project covers the fundamentals of Server-Side Rendering (SSR) in Python. I
 | Task | File | Description |
 | :--- | :--- | :--- |
 | **0. Creating a Simple Templating Program** | `task_00_intro.py` | Python function that generates personalized invitation files from a template and handles edge cases/errors gracefully. |
+| **1. Creating a Basic HTML Template in Flask** | `task_01_jinja.py` | A basic Flask application that serves dynamic web pages (`/`, `/about`, `/contact`) using Jinja2 templates with reusable `header.html` and `footer.html` components. |
 
 ---
 
@@ -17,3 +18,20 @@ This project covers the fundamentals of Server-Side Rendering (SSR) in Python. I
 - **OS:** Ubuntu 20.04 LTS
 - **Python Version:** Python 3.8+
 - **Style Guide:** `pycodestyle` (PEP 8)
+
+---
+
+## 📁 Directory Structure (Task 1)
+
+```text
+python-server_side_rendering/
+│
+├── task_00_intro.py
+├── task_01_jinja.py
+├── README.md
+└── templates/
+    ├── header.html
+    ├── footer.html
+    ├── index.html
+    ├── about.html
+    └── contact.html
