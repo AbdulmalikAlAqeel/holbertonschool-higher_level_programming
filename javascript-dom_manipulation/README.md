@@ -25,6 +25,7 @@ This project introduces the fundamentals of **DOM (Document Object Model) Manipu
 | **4. List of elements** | `4-script.js` | Adds a new `<li>Item</li>` element to the `ul` with class `my_list` when the user clicks on the tag with id `add_item`. |
 | **5. Change the text** | `5-script.js` | Updates the text of the `header` element to `New Header!!!` when the user clicks on the tag with id `update_header`. |
 | **6. Star wars character** | `6-script.js` | Fetches a Star Wars character name from an API using the `Fetch API` and displays it in the `div` with id `character`. |
+| **7. Star Wars movies** | `7-script.js` | Fetches and lists the titles of all Star Wars movies from an API using the `Fetch API` inside the `ul` with id `list_movies`. |
 
 ---
 
@@ -61,3 +62,6 @@ semistandard 5-script.js
 
 semistandard --fix 6-script.js
 semistandard 6-script.js
+
+semistandard --fix 7-script.js
+semistandard 7-script.js
