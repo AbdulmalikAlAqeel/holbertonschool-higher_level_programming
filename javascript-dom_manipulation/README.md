@@ -26,6 +26,7 @@ This project introduces the fundamentals of **DOM (Document Object Model) Manipu
 | **5. Change the text** | `5-script.js` | Updates the text of the `header` element to `New Header!!!` when the user clicks on the tag with id `update_header`. |
 | **6. Star wars character** | `6-script.js` | Fetches a Star Wars character name from an API using the `Fetch API` and displays it in the `div` with id `character`. |
 | **7. Star Wars movies** | `7-script.js` | Fetches and lists the titles of all Star Wars movies from an API using the `Fetch API` inside the `ul` with id `list_movies`. |
+| **8. Say Hello!** | `8-script.js` | Fetches a hello translation from an API and displays it in the `div` with id `hello`, working correctly even when imported in the `<head>` tag via `DOMContentLoaded`. |
 
 ---
 
@@ -65,3 +66,7 @@ semistandard 6-script.js
 
 semistandard --fix 7-script.js
 semistandard 7-script.js
+
+semistandard --fix 8-script.js
+semistandard 8-script.js
+```
