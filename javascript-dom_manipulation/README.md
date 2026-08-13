@@ -23,6 +23,7 @@ This project introduces the fundamentals of **DOM (Document Object Model) Manipu
 | **2. Add .red class** | `2-script.js` | Adds the class `red` to the `header` element when the user clicks on the tag with id `red_header`. |
 | **3. Toggle classes** | `3-script.js` | Toggles the class of the `header` element between `red` and `green` when the user clicks on the tag with id `toggle_header`. |
 | **4. List of elements** | `4-script.js` | Adds a new `<li>Item</li>` element to the `ul` with class `my_list` when the user clicks on the tag with id `add_item`. |
+| **5. Change the text** | `5-script.js` | Updates the text of the `header` element to `New Header!!!` when the user clicks on the tag with id `update_header`. |
 
 ---
 
@@ -36,24 +37,23 @@ To test the scripts:
 ```bash
 semistandard --fix 0-script.js
 semistandard 0-script.js
- ```
 
-```bash
+
 semistandard --fix 1-script.js
 semistandard 1-script.js
-```
 
-```bash
+
 semistandard --fix 2-script.js
 semistandard 2-script.js
-```
 
-```bash
+
 semistandard --fix 3-script.js
 semistandard 3-script.js
-```
 
-```bash
+
 semistandard --fix 4-script.js
 semistandard 4-script.js
-```
+
+
+semistandard --fix 5-script.js
+semistandard 5-script.js
