@@ -24,6 +24,7 @@ This project introduces the fundamentals of **DOM (Document Object Model) Manipu
 | **3. Toggle classes** | `3-script.js` | Toggles the class of the `header` element between `red` and `green` when the user clicks on the tag with id `toggle_header`. |
 | **4. List of elements** | `4-script.js` | Adds a new `<li>Item</li>` element to the `ul` with class `my_list` when the user clicks on the tag with id `add_item`. |
 | **5. Change the text** | `5-script.js` | Updates the text of the `header` element to `New Header!!!` when the user clicks on the tag with id `update_header`. |
+| **6. Star wars character** | `6-script.js` | Fetches a Star Wars character name from an API using the `Fetch API` and displays it in the `div` with id `character`. |
 
 ---
 
@@ -57,3 +58,6 @@ semistandard 4-script.js
 
 semistandard --fix 5-script.js
 semistandard 5-script.js
+
+semistandard --fix 6-script.js
+semistandard 6-script.js
