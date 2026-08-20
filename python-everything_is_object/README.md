@@ -192,3 +192,13 @@ The `+` operator creates a **new list object** `[1, 2, 3, 4]` rather than modify
 
 #### Explanation
 Integers are immutable. When `n += 1` executes inside `increment()`, a new integer object `2` is created and bound to local variable `n`. The original variable `a` in the outer scope remains unchanged (`1`).
+
+
+
+### 17. List incrementation
+* **File:** `17-answer.txt`
+* **Question:** What does the script print when calling `increment(l)` with `l = [1, 2, 3]` and `n.append(4)` inside?
+* **Answer:** `[1, 2, 3, 4]`
+
+#### Explanation
+Lists are mutable objects in Python. When passed to a function, the local parameter `n` points to the same list object as `l`. Calling `n.append(4)` mutates the original list in-place, modifying `l`.
