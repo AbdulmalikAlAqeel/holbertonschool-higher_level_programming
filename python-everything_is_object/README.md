@@ -234,3 +234,13 @@ def copy_list(a_list):
 
 #### Explanation
 Empty parentheses `()` define an empty tuple object in Python (`type(a)` returns `<class 'tuple'>`).
+
+
+
+### 21. Tuple or not?
+* **File:** `21-answer.txt`
+* **Question:** Is `a = (1, 2)` a tuple?
+* **Answer:** `Yes`
+
+#### Explanation
+Enclosing comma-separated elements in parentheses like `(1, 2)` creates a tuple object containing those values (`type(a)` returns `<class 'tuple'>`).
