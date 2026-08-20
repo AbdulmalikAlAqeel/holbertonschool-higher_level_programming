@@ -95,3 +95,13 @@ The `==` operator compares values rather than memory identities. Since both `s1`
 
 
 
+### 7. Is the same
+* **File:** `7-answer.txt`
+* **Question:** What do `s1 = "Best"`, `s2 = s1`, and `print(s1 is s2)` print?
+* **Answer:** `True`
+
+#### Explanation
+The `is` operator checks if two variables refer to the exact same memory location (`id(s1) == id(s2)`). Since `s2` is assigned directly from `s1`, both variables share the same memory reference.
+
+
+
