@@ -112,7 +112,13 @@ The `is` operator checks if two variables refer to the exact same memory locatio
 
 #### Explanation
 The `==` operator compares the content/values of the two strings. Since both `s1` and `s2` contain `"Best School"`, the expression evaluates to `True`.
-EOF
 
 
 
+### 9. Is really the same
+* **File:** `9-answer.txt`
+* **Question:** What do `s1 = "Best School"`, `s2 = "Best School"`, and `print(s1 is s2)` print?
+* **Answer:** `False`
+
+#### Explanation
+In interactive CPython, automatic string interning only applies to ASCII strings that mimic valid Python identifiers (letters, numbers, underscores). Because `"Best School"` contains a space, Python allocates two distinct string objects in memory, making `s1 is s2` evaluate to `False`.
