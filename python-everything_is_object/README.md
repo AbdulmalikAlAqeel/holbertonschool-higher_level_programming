@@ -162,3 +162,13 @@ Lists are mutable objects in Python. Defining two separate list literals creates
 
 #### Explanation
 Assigning `l2 = l1` passes the reference of the existing list to `l2` (aliasing). Since both variables reference the exact same memory address, `l1 is l2` evaluates to `True`.
+
+
+
+### 14. List append
+* **File:** `14-answer.txt`
+* **Question:** What does `l1 = [1, 2, 3]; l2 = l1; l1.append(4); print(l2)` print?
+* **Answer:** `[1, 2, 3, 4]`
+
+#### Explanation
+Since lists are mutable and `l2` is an alias of `l1`, using `l1.append(4)` modifies the list in-place. Printing `l2` reflects this change because both variables reference the same list object in memory.
