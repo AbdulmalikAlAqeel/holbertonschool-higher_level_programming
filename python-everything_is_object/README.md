@@ -304,3 +304,13 @@ In Python, an empty tuple `()` is implemented as a singleton. Since it is immuta
 
 #### Explanation
 Concatenating lists with the `+` operator (`a + [5]`) creates a new list object in memory and rebinds `a` to it. As a result, its memory address (`id(a)`) changes to a new value.
+
+
+
+### 28. Same or not?
+* **File:** `28-answer.txt`
+* **Question:** Will `a += [4]` result in the same `id(a)`?
+* **Answer:** `Yes`
+
+#### Explanation
+When using `+=` on a list, Python performs an in-place modification (similar to `a.extend()`). Since the original list object is modified rather than replaced by a new one, the object's identity (`id(a)`) remains unchanged.
