@@ -152,3 +152,13 @@ Lists are mutable objects in Python. Defining two separate list literals creates
 
 #### Explanation
 `l2 = l1` creates an alias, making `l2` reference the exact same object as `l1`. Since both reference identical contents (`[1, 2, 3]`), `l1 == l2` evaluates to `True`.
+
+
+
+### 13. And with a list, is it really the same
+* **File:** `13-answer.txt`
+* **Question:** What do `l1 = [1, 2, 3]`, `l2 = l1`, and `print(l1 is l2)` print?
+* **Answer:** `True`
+
+#### Explanation
+Assigning `l2 = l1` passes the reference of the existing list to `l2` (aliasing). Since both variables reference the exact same memory address, `l1 is l2` evaluates to `True`.
