@@ -55,3 +55,13 @@ Since `89` and `100` are distinct integer values, Python allocates two separate 
 
 
 
+### 3. Right count =
+* **File:** `3-answer.txt`
+* **Question:** In `a = 89` and `b = 89`, do `a` and `b` point to the same object?
+* **Answer:** `Yes`
+
+#### Explanation
+CPython pre-allocates and caches small integers in the range `-5` to `256`. Since `89` falls within this range, both `a` and `b` reference the exact same memory object (`a is b` returns `True`).
+
+
+
