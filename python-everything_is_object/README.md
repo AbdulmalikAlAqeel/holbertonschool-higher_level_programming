@@ -294,3 +294,13 @@ Unlike empty tuples, non-empty tuples created line-by-line in the REPL are not a
 
 #### Explanation
 In Python, an empty tuple `()` is implemented as a singleton. Since it is immutable and empty, Python reuses the exact same memory address for every empty tuple object, making `a is b` evaluate to `True`.
+
+
+
+### 27. Still the same?
+* **File:** `27-answer.txt`
+* **Question:** Will `a = a + [5]` keep the same `id(a)` as `139926795932424`?
+* **Answer:** `No`
+
+#### Explanation
+Concatenating lists with the `+` operator (`a + [5]`) creates a new list object in memory and rebinds `a` to it. As a result, its memory address (`id(a)`) changes to a new value.
