@@ -284,3 +284,13 @@ Without a trailing comma, `(1)` evaluates to the integer `1`. Because Python cac
 
 #### Explanation
 Unlike empty tuples, non-empty tuples created line-by-line in the REPL are not automatically interned. Thus, `a` and `b` refer to two distinct tuple objects in memory (`id(a) != id(b)`), making `a is b` evaluate to `False`.
+
+
+
+### 26. Empty is not empty
+* **File:** `26-answer.txt`
+* **Question:** What do `a = ()`, `b = ()`, and `a is b` print?
+* **Answer:** `True`
+
+#### Explanation
+In Python, an empty tuple `()` is implemented as a singleton. Since it is immutable and empty, Python reuses the exact same memory address for every empty tuple object, making `a is b` evaluate to `True`.
