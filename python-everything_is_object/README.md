@@ -85,3 +85,13 @@ Integers are immutable. Evaluating `a + 1` produces a new integer object (`90`).
 
 
 
+### 6. Is equal
+* **File:** `6-answer.txt`
+* **Question:** What do `s1 = "Best School"`, `s2 = s1`, and `print(s1 == s2)` print?
+* **Answer:** `True`
+
+#### Explanation
+The `==` operator compares values rather than memory identities. Since both `s1` and `s2` contain the exact same string (`"Best School"`), `s1 == s2` evaluates to `True`.
+
+
+
