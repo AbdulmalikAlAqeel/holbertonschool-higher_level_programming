@@ -142,3 +142,13 @@ The `==` operator checks for value equality between objects. Although `l1` and `
 
 #### Explanation
 Lists are mutable objects in Python. Defining two separate list literals creates two distinct objects in memory with different addresses (`id(l1) != id(l2)`), so `l1 is l2` evaluates to `False`.
+
+
+
+### 12. And with a list, is it really equal
+* **File:** `12-answer.txt`
+* **Question:** What do `l1 = [1, 2, 3]`, `l2 = l1`, and `print(l1 == l2)` print?
+* **Answer:** `True`
+
+#### Explanation
+`l2 = l1` creates an alias, making `l2` reference the exact same object as `l1`. Since both reference identical contents (`[1, 2, 3]`), `l1 == l2` evaluates to `True`.
