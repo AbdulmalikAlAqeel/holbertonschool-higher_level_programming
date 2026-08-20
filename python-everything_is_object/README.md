@@ -274,3 +274,13 @@ The trailing comma `,` explicitly declares a single-element tuple in Python. The
 
 #### Explanation
 Without a trailing comma, `(1)` evaluates to the integer `1`. Because Python caches small integers (from -5 to 257), both `a` and `b` reference the same integer object in memory, making `a is b` evaluate to `True`.
+
+
+
+### 25. Tuple or not
+* **File:** `25-answer.txt`
+* **Question:** What do `a = (1, 2)`, `b = (1, 2)`, and `a is b` print?
+* **Answer:** `False`
+
+#### Explanation
+Unlike empty tuples, non-empty tuples created line-by-line in the REPL are not automatically interned. Thus, `a` and `b` refer to two distinct tuple objects in memory (`id(a) != id(b)`), making `a is b` evaluate to `False`.
