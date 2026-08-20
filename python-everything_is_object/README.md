@@ -244,3 +244,13 @@ Empty parentheses `()` define an empty tuple object in Python (`type(a)` returns
 
 #### Explanation
 Enclosing comma-separated elements in parentheses like `(1, 2)` creates a tuple object containing those values (`type(a)` returns `<class 'tuple'>`).
+
+
+
+### 22. Tuple or not?
+* **File:** `22-answer.txt`
+* **Question:** Is `a = (1)` a tuple?
+* **Answer:** `No`
+
+#### Explanation
+Parentheses without a trailing comma are evaluated as mathematical grouping. `a = (1)` creates an integer (`int`). To define a single-element tuple, a trailing comma is required, such as `a = (1,)`.
