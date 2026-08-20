@@ -25,3 +25,23 @@ In Python, every data piece (numbers, strings, lists, functions) is an object. T
 <class 'int'>
 >>> type("Holberton")
 <class 'str'>
+```
+
+
+
+### 1. Where are you?
+* **File:** `1-answer.txt`
+* **Question:** How do you get the variable identifier (which is the memory address in the CPython implementation)?
+* **Answer:** `id`
+
+#### Explanation
+In CPython, the built-in `id()` function returns a unique integer that represents the memory address where the object is stored. This identifier is guaranteed to be unique and constant for the object during its lifetime.
+
+```python
+>>> a = [1, 2, 3]
+>>> id(a)
+140512836294208  # Memory address in RAM
+```
+
+
+
