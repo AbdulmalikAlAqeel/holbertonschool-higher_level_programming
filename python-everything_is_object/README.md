@@ -65,3 +65,13 @@ CPython pre-allocates and caches small integers in the range `-5` to `256`. Sinc
 
 
 
+### 4. Right count =
+* **File:** `4-answer.txt`
+* **Question:** In `a = 89` and `b = a`, do `a` and `b` point to the same object?
+* **Answer:** `Yes`
+
+#### Explanation
+Assigning one variable to another (`b = a`) copies the object reference, not the object itself (aliasing). Therefore, both variables point to the exact same memory address (`a is b` returns `True`).
+
+
+
