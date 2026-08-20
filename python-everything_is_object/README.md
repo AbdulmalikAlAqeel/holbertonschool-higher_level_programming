@@ -202,3 +202,13 @@ Integers are immutable. When `n += 1` executes inside `increment()`, a new integ
 
 #### Explanation
 Lists are mutable objects in Python. When passed to a function, the local parameter `n` points to the same list object as `l`. Calling `n.append(4)` mutates the original list in-place, modifying `l`.
+
+
+
+### 18. List assignation
+* **File:** `18-answer.txt`
+* **Question:** What does the script print when `assign_value(l1, l2)` executes `n = v`?
+* **Answer:** `[1, 2, 3]`
+
+#### Explanation
+Inside `assign_value`, `n = v` rebinds the local name `n` to point to `v`'s object. Reassigning a local variable does not mutate the original object nor does it affect the global variable `l1`, so `l1` remains `[1, 2, 3]`.
