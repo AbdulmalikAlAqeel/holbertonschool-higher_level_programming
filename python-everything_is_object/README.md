@@ -122,3 +122,13 @@ The `==` operator compares the content/values of the two strings. Since both `s1
 
 #### Explanation
 In interactive CPython, automatic string interning only applies to ASCII strings that mimic valid Python identifiers (letters, numbers, underscores). Because `"Best School"` contains a space, Python allocates two distinct string objects in memory, making `s1 is s2` evaluate to `False`.
+
+
+
+### 10. And with a list, is it equal
+* **File:** `10-answer.txt`
+* **Question:** What do `l1 = [1, 2, 3]`, `l2 = [1, 2, 3]`, and `print(l1 == l2)` print?
+* **Answer:** `True`
+
+#### Explanation
+The `==` operator checks for value equality between objects. Although `l1` and `l2` are two separate list objects in memory, their contents are identical, so `l1 == l2` evaluates to `True`.
