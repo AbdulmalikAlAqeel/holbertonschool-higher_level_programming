@@ -264,3 +264,13 @@ Parentheses without a trailing comma are evaluated as mathematical grouping. `a 
 
 #### Explanation
 The trailing comma `,` explicitly declares a single-element tuple in Python. Therefore, `a = (1, )` creates a tuple object (`type(a)` returns `<class 'tuple'>`).
+
+
+
+### 24. Who I am?
+* **File:** `24-answer.txt`
+* **Question:** What does `a = (1); b = (1); a is b` print?
+* **Answer:** `True`
+
+#### Explanation
+Without a trailing comma, `(1)` evaluates to the integer `1`. Because Python caches small integers (from -5 to 257), both `a` and `b` reference the same integer object in memory, making `a is b` evaluate to `True`.
