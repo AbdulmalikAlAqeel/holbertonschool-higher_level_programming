@@ -182,3 +182,13 @@ Since lists are mutable and `l2` is an alias of `l1`, using `l1.append(4)` modif
 
 #### Explanation
 The `+` operator creates a **new list object** `[1, 2, 3, 4]` rather than modifying the existing list in-place. Reassigning `l1` points it to the new object, leaving `l2` still pointing to the original unchanged list `[1, 2, 3]`.
+
+
+
+### 16. Integer incrementation
+* **File:** `16-answer.txt`
+* **Question:** What does the script print when `increment(a)` is called on `a = 1`?
+* **Answer:** `1`
+
+#### Explanation
+Integers are immutable. When `n += 1` executes inside `increment()`, a new integer object `2` is created and bound to local variable `n`. The original variable `a` in the outer scope remains unchanged (`1`).
