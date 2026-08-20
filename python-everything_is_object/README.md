@@ -132,3 +132,13 @@ In interactive CPython, automatic string interning only applies to ASCII strings
 
 #### Explanation
 The `==` operator checks for value equality between objects. Although `l1` and `l2` are two separate list objects in memory, their contents are identical, so `l1 == l2` evaluates to `True`.
+
+
+
+### 11. And with a list, is it the same
+* **File:** `11-answer.txt`
+* **Question:** What do `l1 = [1, 2, 3]`, `l2 = [1, 2, 3]`, and `print(l1 is l2)` print?
+* **Answer:** `False`
+
+#### Explanation
+Lists are mutable objects in Python. Defining two separate list literals creates two distinct objects in memory with different addresses (`id(l1) != id(l2)`), so `l1 is l2` evaluates to `False`.
