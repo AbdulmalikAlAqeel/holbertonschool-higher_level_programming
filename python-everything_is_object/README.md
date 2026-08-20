@@ -75,3 +75,13 @@ Assigning one variable to another (`b = a`) copies the object reference, not the
 
 
 
+### 5. Right count =+
+* **File:** `5-answer.txt`
+* **Question:** In `a = 89` and `b = a + 1`, do `a` and `b` point to the same object?
+* **Answer:** `No`
+
+#### Explanation
+Integers are immutable. Evaluating `a + 1` produces a new integer object (`90`). Since `a` references `89` and `b` references `90`, they point to two distinct memory objects (`a is b` returns `False`).
+
+
+
