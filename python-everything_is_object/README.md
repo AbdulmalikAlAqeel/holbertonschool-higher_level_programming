@@ -45,3 +45,13 @@ In CPython, the built-in `id()` function returns a unique integer that represent
 
 
 
+### 2. Right count
+* **File:** `2-answer.txt`
+* **Question:** In `a = 89` and `b = 100`, do `a` and `b` point to the same object?
+* **Answer:** `No`
+
+#### Explanation
+Since `89` and `100` are distinct integer values, Python allocates two separate objects in memory. Therefore, `a` and `b` hold references to different memory addresses (`id(a) != id(b)`).
+
+
+
