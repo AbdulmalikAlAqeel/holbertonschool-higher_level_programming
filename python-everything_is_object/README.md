@@ -172,3 +172,13 @@ Assigning `l2 = l1` passes the reference of the existing list to `l2` (aliasing)
 
 #### Explanation
 Since lists are mutable and `l2` is an alias of `l1`, using `l1.append(4)` modifies the list in-place. Printing `l2` reflects this change because both variables reference the same list object in memory.
+
+
+
+### 15. List add
+* **File:** `15-answer.txt`
+* **Question:** What does `l1 = [1, 2, 3]; l2 = l1; l1 = l1 + [4]; print(l2)` print?
+* **Answer:** `[1, 2, 3]`
+
+#### Explanation
+The `+` operator creates a **new list object** `[1, 2, 3, 4]` rather than modifying the existing list in-place. Reassigning `l1` points it to the new object, leaving `l2` still pointing to the original unchanged list `[1, 2, 3]`.
