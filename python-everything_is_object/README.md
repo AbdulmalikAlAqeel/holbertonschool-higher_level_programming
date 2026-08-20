@@ -105,3 +105,14 @@ The `is` operator checks if two variables refer to the exact same memory locatio
 
 
 
+### 8. Is really equal
+* **File:** `8-answer.txt`
+* **Question:** What do `s1 = "Best School"`, `s2 = "Best School"`, and `print(s1 == s2)` print?
+* **Answer:** `True`
+
+#### Explanation
+The `==` operator compares the content/values of the two strings. Since both `s1` and `s2` contain `"Best School"`, the expression evaluates to `True`.
+EOF
+
+
+
