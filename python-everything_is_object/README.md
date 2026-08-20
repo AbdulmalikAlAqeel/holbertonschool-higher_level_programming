@@ -254,3 +254,13 @@ Enclosing comma-separated elements in parentheses like `(1, 2)` creates a tuple 
 
 #### Explanation
 Parentheses without a trailing comma are evaluated as mathematical grouping. `a = (1)` creates an integer (`int`). To define a single-element tuple, a trailing comma is required, such as `a = (1,)`.
+
+
+
+### 23. Tuple or not?
+* **File:** `23-answer.txt`
+* **Question:** Is `a = (1, )` a tuple?
+* **Answer:** `Yes`
+
+#### Explanation
+The trailing comma `,` explicitly declares a single-element tuple in Python. Therefore, `a = (1, )` creates a tuple object (`type(a)` returns `<class 'tuple'>`).
